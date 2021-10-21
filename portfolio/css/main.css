@@ -20,13 +20,19 @@
 
 
 
+
 .sc01 figure {width:250px;margin:0 auto;background:#f4f4f4;margin-bottom:30px;border-radius:50%;overflow:hidden;transform:scale(0.3);opacity:0;position:relative;}
 
 .sc01 figure:before {content:"\e91c";font-family: xeicon!important;display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:url(../img/bg03.png);opacity:0.25;color:#fff;font-size:80px;}
 
 .sc01.on figure {transform:scale(1) rotate(360deg);transition:3s 1s;opacity:1;}
 
-.sc01 figure img {width:100%;}
+.sc01 figure img {width:100%;border-radius:50%;}
+
+.sc01.on figure img {animation:zz 6s linear infinite}
+@keyframes zz {
+    to {transform:rotate(360deg)}
+}
 
 
 
