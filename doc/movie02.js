@@ -3,7 +3,7 @@ $(function(){
 
 //------------------------------------------------------
 
-$("#mv01").YTPlayer({
+$("#bgndVideo").YTPlayer({
     videoURL:'https://www.youtube.com/watch?v=QS19SFq166g&list=PLunuBhv6lAo3u2pox6EyjRooF-Ekn7m5k&index=18',
     containment:'#visual',
     autoPlay:true,
@@ -11,6 +11,17 @@ $("#mv01").YTPlayer({
     startAt:0,
     opacity:1,
     showControls:false,
+});
+
+
+$('#visual i.xi-pause').on('click', function(){
+    $('#bgndVideo').YTPPause();
+});
+$('#visual i.xi-play').on('click', function(){
+    $('#bgndVideo').YTPPlay();
+});
+$('#visual i.xi-tv').on('click', function(){
+    $('#bgndVideo').YTPFullscreen();
 });
 
 $("#mv02").YTPlayer({
@@ -25,14 +36,14 @@ $("#mv02").YTPlayer({
     optimizeDisplay:false,
 });
 
-$('#visual i.xi-pause').on('click', function(){
-    $('#mv01').YTPPause();
+$('#movie02 i.xi-pause').on('click', function(){
+    $('#mv02').YTPPause();
 });
-$('#visual i.xi-play').on('click', function(){
-    $('#mv01').YTPPlay();
+$('#movie02 i.xi-play').on('click', function(){
+    $('#mv02').YTPPlay();
 });
-$('#visual i.xi-tv').on('click', function(){
-    $('#mv01').YTPFullscreen();
+$('#movie02 i.xi-tv').on('click', function(){
+    $('#mv02').YTPFullscreen();
 });
 //------------------------------------------------------
 
