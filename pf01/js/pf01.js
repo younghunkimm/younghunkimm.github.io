@@ -72,15 +72,9 @@ $(function () {
         // console.log(sct)
 
         if (sct > 1540) {
-            $('#content02 h2').addClass('on')
+            $('#content02').addClass('on')
         } else {
-            $('#content02 h2').removeClass('on')
-        };
-
-        if (sct > 1540) {
-            $('#content02 p').addClass('on')
-        } else {
-            $('#content02 p').removeClass('on')
+            $('#content02').removeClass('on')
         };
     });
 

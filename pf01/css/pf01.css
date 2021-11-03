@@ -73,9 +73,9 @@
 
 
 #main_visual figure .container03 {position:absolute;display:flex;justify-content:space-between;top:50%;left:50%;transform:translate(-50%,-50%);width:1600px;}
-#main_visual figure .container03 h2 {color:#fff;font-size:70px;font-weight:300;text-shadow:#000 0 0 3px;text-align:left;opacity:0;}
+#main_visual figure .container03 h2 {color:#fff;font-size:70px;font-weight:500;text-shadow:#000 0 0 3px;text-align:left;opacity:0;}
 #main_visual figure.on .container03 h2 {opacity:1;transition:2s;}
-#main_visual figure .container03 p {color:#fff;font-size:70px;font-weight:300;text-shadow:#000 0 0 3px;text-align:right;opacity:0;}
+#main_visual figure .container03 p {color:#fff;font-size:70px;font-weight:500;text-shadow:#000 0 0 3px;text-align:right;opacity:0;}
 #main_visual figure.on .container03 p {opacity:1;transition:2s;}
 
 
@@ -122,13 +122,14 @@
 
 
 
-#content02 {padding:156px 0;background:url(../img/sc2_banner02.jpg) no-repeat center center/cover;text-align:center;color:#fff;text-shadow:#000 1px 1px 1px;}
+#content02 {padding:100px 0;background:url(../img/sc2_banner02.jpg) no-repeat center center/cover;text-align:center;color:#ddd;}
 #content02 .container {width:1200px;margin:0 auto;padding:0 15px;}
-#content02 h2 {font-size:40px;font-weight:400;letter-spacing:-0.05em;margin-bottom:20px;opacity:0;}
-#content02 h2.on {opacity:1;transition:2s;}
-#content02 p {font-size:40px;font-weight:400;letter-spacing:-0.05em;opacity:0;}
-#content02 p.on {opacity:1;transition:2s 1s;}
-
+#content02 h2 {font-size:30px;font-weight:500;letter-spacing:-0.05em;margin-bottom:10px;opacity:0;}
+#content02.on h2 {opacity:1;transition:2s;}
+#content02 p {font-size:16px;font-weight:300;line-height:24px;letter-spacing:-0.05em;opacity:0;}
+#content02.on p {opacity:1;transition:2s 1s;}
+#content02 a {display:block;font-size:14px;width:150px;height:40px;margin:20px auto;background:#333;text-align:center;line-height:40px;opacity:0;}
+#content02.on a {opacity:1;transition:2s 2s;}
 
 
 
@@ -176,7 +177,7 @@
 
 
 
-#content05 {padding:150px 0;background:#f9f9f9;}
+#content05 {padding:150px 0;background:#f7f7f7}
 #content05 .container {display:flex;width:1200px;margin:0 auto;text-align:center;}
 #content05 figure {flex:1;padding:0 15px;margin-bottom:30px;}
 #content05 figure a {display:block;overflow:hidden;position:relative;}
