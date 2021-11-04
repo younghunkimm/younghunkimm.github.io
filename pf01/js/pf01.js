@@ -22,6 +22,7 @@ $(function () {
         }
     });
 
+
     // 메인비주얼 슬릭
     $('.main_slider').slick({
         arrows: false,
@@ -66,7 +67,7 @@ $(function () {
         $('#content01 figure').eq(c + 4).addClass('on').siblings().removeClass('on')
     });
 
-    // 새로고침 했을 때 5번째로 가있게
+    // 새로고침 했을 때 제품 5번째로
     $('.pr_slider').slick('slickGoTo', 5);
 
     // 아이콘 눌렀을 때 이벤트(Prev, Next)
@@ -85,9 +86,9 @@ $(function () {
     // 스크롤 이벤트 - 컨텐츠02
     $(window).on('scroll', function () {
         var sct = $(window).scrollTop();
-        // console.log(sct)
+        console.log(sct)
 
-        if (sct > 1540) {
+        if (sct > 1470) {
             $('#content02').addClass('on')
         } else {
             $('#content02').removeClass('on')
