@@ -49,9 +49,75 @@ body {color:#333;}
 #product01 figure img {transition:0.4s;}
 #product01 figure:hover img {transform:scale(1.1);}
 
+/* main_banner */
+#main_banner {padding:150px 0;background:url(../lib/base/main_visual01.jpg) no-repeat center center/cover;background-attachment:fixed;color:#fff;text-align:center;}
+#main_banner h2 {font-size:24px;font-weight:500;margin-bottom:10px;}
+#main_banner p {font-weight:300;letter-spacing:-0.025em;margin-bottom:20px;}
+#main_banner i {font-size:20px;padding:5px;background:#fe5500;border-radius:50% 0;vertical-align:middle;margin-left:10px;}
+
+/* product02 */
+#product02 {padding:150px 0;}
+#product02 .container {display:flex;flex-wrap:wrap;width:1200px;margin:0 auto;padding:0 15px;}
+#product02 img {max-width:100%;}
+#product02 .pic {width:50%;}
+#product02 .des {display:flex;width:50%;text-align:center;background:#f7f7f7;}
+#product02 .des .des_con {margin:auto;padding:0 30px;}
+
+#product02 .des .des_con h3 {font-size:24px;font-weight:500;margin-bottom:10px;}
+#product02 .des .des_con h3:after {content:"";display:block;width:10px;height:80px;background:blue;margin:20px auto;opacity:0.3;}
+#product02 .des .des_con p {font-weight:300;letter-spacing:-0.025em;margin-bottom:20px;line-height:1.5;}
+#product02 .des .des_con a i {font-size:20px;padding:5px;color:#fff;background:#fe5500;border-radius:50% 0;vertical-align:middle;margin-left:10px;transition:.4s;}
+#product02 .des .des_con a:hover i {border-radius:50% 50%;}
+
+/* product03 */
+#product03 {padding:100px 0;text-align:center;}
+#product03 h2 {font-size:24px;font-weight:500;margin-bottom:10px;}
+#product03 p {font-weight:300;letter-spacing:-0.025em;margin-bottom:30px;}
+
+#product03 .container {width:1200px;margin:0 auto;}
+#product03 img {max-width:100%;}
+#product03 figure {padding:30px 15px;}
+#product03 .case {margin-bottom:30px;}
+#product03 figure img {transform:scale(0.8);transition:0.5s;border:0 solid #f0f;}
+#product03 figure.on img {transform:scale(1.3);border:2px solid #f0f;}
+#product03 figure strong {display:block;}
+#product03 figure.on strong {position:absolute;top:50%;color:#fe5500;}
+
+#product03 .slide_bar {width:600px;height:5px;background:#ddd;border:radius:3px;margin:30px auto;position:relative;}
+#product03 .slide_bar>span {display:block;width:100px;height:5px;border-radius:3px;background:#333;position:absolute;top:0;left:0;transition:0.5s;}
+
+#product04 {padding:100px 0;}
+#product04 h2 {}
+#product04 p {}
+
+#product04 .container {display:flex;width:1200px;margin:0 auto;}
+
+#product04 .container .des {flex:1;padding:0 15px;}
+#product04 .container .con {flex:2;overflow:hidden;position:relative;}
+#product04 .container .con figure {padding:0 15px;}
+#product04 .container .con img {max-width:100%;}
+
+#product04 .container .con i {position:absolute;top:50%;background:#fff;padding:10px;border:1px solid #ddd;}
+#product04 .container .con i.xi-arrow-left {left:0;}
+#product04 .container .con i.xi-arrow-right {right:0;}
+
+#product04 .des h3 {font-size:24px;font-weight:500;margin-bottom:10px;}
+#product04 .des h3:after {content:"";display:block;width:40px;height:1px;background:#fe5500;margin:20px 0;}
+#product04 .des p {font-weight:300;letter-spacing:-0.025em;margin-bottom:20px;line-height:24px;}
+#product04 .des a i {font-size:20px;padding:5px;background:#fe5500;color:#fff;border-radius:50% 0;vertical-align:middle;margin-left:10px;transition:0.4s;}
+#product04 .des a:hover i {border-radius:50% 50%;}
 
 
-
+#footer {background:#333;color:#f4f4f4;font-weight:300;}
+#footer .container {display:flex;justify-content:space-between;width:1200px;margin:0 auto;line-height:100px;padding:0 15px;}
+#footer .customer_link {display:flex;}
+#footer .customer_link li {position:relative;}
+#footer .customer_link li a {display:block;padding:0 20px;}
+#footer .customer_link li~li:after {content:"I";position:absolute;top:0;left:0;}
+#footer .customer_link li:first-child a {padding:0 20px 0 0;}
+#footer hr {border:none;border-top:1px solid #444;}
+#footer .sns {font-size:30px;}
+#footer select {background:#333;padding:5px 15px;outline:none;}
 
 
 
