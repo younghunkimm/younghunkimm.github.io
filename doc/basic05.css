@@ -107,6 +107,18 @@ body {color:#333;}
 #product04 .des a i {font-size:20px;padding:5px;background:#fe5500;color:#fff;border-radius:50% 0;vertical-align:middle;margin-left:10px;transition:0.4s;}
 #product04 .des a:hover i {border-radius:50% 50%;}
 
+#tab {padding:150px 0;background:#f7f7f7;}
+#tab .container {width:1200px;margin:0 auto;padding:0 15px;}
+#tab .tab_menu {display:flex;border-bottom:1px solid #ddd;margin-bottom:10px;}
+#tab .tab_menu li a {display:block;line-height:40px;padding:0 50px;background:#369;color:#fff;text-align:center;}
+#tab .tab_menu li~li {border-left:1px solid #f7f7f7;}
+
+#tab .tab_con {position:relative;height:300px;}
+#tab .tab_con .tab_slider {position:absolute;top:0;left:0;width:100%;visibility:hidden;}
+#tab .tab_con .tab_slider.on {visibility:visible;}
+#tab .tab_con figure {padding:0 15px;}
+#tab .tab_con figure img {width:100%;}
+
 
 #footer {background:#333;color:#f4f4f4;font-weight:300;}
 #footer .container {display:flex;justify-content:space-between;width:1200px;margin:0 auto;line-height:100px;padding:0 15px;}
