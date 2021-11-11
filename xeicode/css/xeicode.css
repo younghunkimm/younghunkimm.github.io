@@ -1,0 +1,21 @@
+* {text-align:center;}
+
+.container {width:1200px;margin:0 auto;}
+h1 {font-size:30px;padding:100px 0;font-weight:700;}
+h1:after {content:"김영훈";display:block;margin:10px 0;font-size:14px;color:#333;}
+.ul_box {margin-bottom:100px;}
+ul {display:flex;justify-content:center;margin-bottom:20px;}
+ul>li {padding:0 15px;user-select:all;position:relative;}
+ul>li~li:after {content:"";display:block;width:1px;height:10px;background:#333;position:absolute;top:60%;left:0;transform:translateY(-50%);}
+h2 {font-size:25px;font-weight:500;letter-spacing:0.1em;}
+h2:after {content:"";display:block;width:40px;height:3px;background:rgb(255, 110, 110);margin:20px auto;}
+.glyph_box {padding:100px 0;display:flex;flex-wrap:wrap;}
+.glyph {width:200px;height:150px;font-weight:400;font-size:14px;}
+.glyph i {font-size:30px;margin-bottom:15px;}
+.glyph h3 {margin-bottom:10px;user-select:all;}
+.glyph p {user-select:all;}
+
+
+
+.toTop {position:fixed;bottom:50px;right:50px;width:50px;line-height:50px;background:#333;color:#fff;}
+.toTop a {display:block;}
