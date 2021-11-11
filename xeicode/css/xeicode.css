@@ -5,7 +5,7 @@ h1 {font-size:30px;padding:100px 0;font-weight:700;}
 h1:after {content:"김영훈";display:block;margin:10px 0;font-size:14px;color:#333;}
 .ul_box {margin-bottom:100px;}
 ul {display:flex;justify-content:center;margin-bottom:20px;}
-ul>li {padding:0 15px;user-select:all;position:relative;}
+ul>li {padding:0 15px;position:relative;}
 ul>li~li:after {content:"";display:block;width:1px;height:10px;background:#333;position:absolute;top:60%;left:0;transform:translateY(-50%);}
 h2 {font-size:25px;font-weight:500;letter-spacing:0.1em;}
 h2:after {content:"";display:block;width:40px;height:3px;background:rgb(255, 110, 110);margin:20px auto;}
