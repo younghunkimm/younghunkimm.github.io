@@ -9,7 +9,7 @@ h1:after {content:"김영훈";display:block;margin:10px 0;font-size:14px;color:#
 .ul_box {position:fixed;top:0;left:0;width:200px;height:100vh;background:#333;color:#fff;line-height:50px;border-right:1px solid #222;padding:15px 0;}
 .ul_box ul {padding:0 15px;}
 .ul_box ul>li~li {border-top:1px solid #444;}
-.ul_box h2 {font-size:25px;font-weight:500;letter-spacing:0.1em;}
+.ul_box h2 {font-size:25px;font-weight:500;letter-spacing:0.1em;cursor:pointer;}
 .ul_box h2:after {content:"";display:block;width:3px;height:40px;background:rgb(255, 110, 110);margin:20px auto;}
 
 
