@@ -30,13 +30,13 @@ body {background:#333;color:#fff;font-weight:300;text-align:center;}
 }
 
 @keyframes bts {
-    0% {transform:translate(0,0) rotate(45deg);}
-    10% {transform:translate(100px,60px) rotate(40deg);}
-    20% {transform:translate(250px,90px) rotate(60deg);}
+    0% {transform:translate(0,0) rotate(85deg);}
+    10% {transform:translate(100px,60px) rotate(80deg);}
+    20% {transform:translate(250px,90px) rotate(70deg);}
     30% {transform:translate(400px,110px) rotate(80deg);}
-    40% {transform:translate(550px,90px) rotate(60deg);}
+    40% {transform:translate(550px,90px) rotate(70deg);}
     50% {transform:translate(700px,110px) rotate(80deg);}
-    60% {transform:translate(850px,90px) rotate(60deg);}
+    60% {transform:translate(850px,90px) rotate(70deg);}
     70% {transform:translate(1000px,50px) rotate(30deg);}
     75% {transform:translate(1050px,0) rotate(20deg);}
     80% {transform:translate(1110px,-50px) rotate(10deg);}
