@@ -57,8 +57,8 @@
 #con01 .tab_menu>li.on a {border-bottom:2px solid #1361a6;}
 
 #con01 .tab_content {position:relative;height:530px;}
-#con01 .tab_content .tab_slider {position:absolute;top:0;left:0;width:100%;text-align:center;visibility:hidden;opacity:0;transition:0.2s;}
-#con01 .tab_content .tab_slider.on {visibility:visible;opacity:1;}
+#con01 .tab_content .tab_slider {position:absolute;top:0;left:0;width:100%;text-align:center;visibility:hidden;opacity:0;}
+#con01 .tab_content .tab_slider.on {visibility:visible;opacity:1;transition:0.4s;}
 #con01 .tab_content .tab_slider figure {height:530px;}
 #con01 .tab_content .tab_slider figure img {width:100%;margin:30px 0;}
 #con01 .tab_content .tab_slider figure h3 {font-size:20px;font-weight:500;padding:20px 0 10px 0;letter-spacing:0.025em}

@@ -24,6 +24,7 @@ $('.tab_menu>li').on('click', function(){
     console.log(fl);
     $('.tab_content .tab_slider').eq(idx).addClass('on').siblings().removeClass('on');
     $(this).addClass('on').siblings().removeClass('on');
+    $('.tab_slider').slick('slickGoTo', 1);
 
     if (fl > 3) {
         $('.btn').show()
