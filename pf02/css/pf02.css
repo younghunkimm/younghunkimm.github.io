@@ -16,11 +16,14 @@
 #header nav>ul>li>a {display:block;padding:0 40px;}
 #header nav>ul>li~li>a:after {content:"";display:block;width:1px;height:12px;background:#ddd;position:absolute;top:50%;left:0;transform:translateY(-50%);}
 
-#header nav>ul>li>ul {position:absolute;top:90px;left:50%;transform:translateX(-50%);width:250px;padding:15px 25px;line-height:50px;background:rgba(0,0,0,0.8);color:#ddd;opacity:0;border-top:2px solid #1361a6;}
-#header nav>ul>li:hover>ul {top:100px;opacity:1;border-top:2px solid #1361a6;transition:0.5s;}
+#header nav>ul>li>ul {position:absolute;top:90px;left:50%;transform:translateX(-50%);width:250px;padding:15px 25px;line-height:50px;background:rgba(0,0,0,0.8);color:#ddd;visibility:hidden;opacity:0;border-top:2px solid #1361a6;}
+#header nav>ul>li:hover>ul {top:100px;opacity:1;visibility:visible;transition:0.5s;border-top:2px solid #1361a6;}
 #header nav>ul>li>ul>li:hover {color:#1361a6;}
 #header nav>ul>li>ul>li~li a {border-top:1px solid #333;}
 #header nav>ul>li>ul>li a {display:block;}
+#header nav>ul>li .model_smenu {display:flex;justify-content:center;width:800px;}
+#header nav>ul>li .model_smenu li a {display:block;border:none;padding:0 20px;}
+
 
 
 #header i {font-size:24px;margin-left:10px;}
@@ -29,7 +32,8 @@
 /* 메인비주얼 */
 #main_visual {position:relative;}
 #main_visual figure {height:100vh;position:relative;}
-#main_visual .main_con {position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:1200px;margin:0 auto;padding:0 15px;color:#fff;}
+#main_visual .main_con {position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);width:1200px;margin:0 auto;padding:0 15px;color:#fff;}
+#main_visual .main02_con {top:35%;}
 #main_visual p {font-size:20px;margin-bottom:20px;font-weight:100;letter-spacing:-0.025em;}
 #main_visual h2 {font-size:70px;margin-bottom:50px;letter-spacing:0.05em;}
 #main_visual a {padding:10px 40px;background:#1361a6;}
@@ -62,6 +66,7 @@
 #con01 .tab_content .tab_slider figure a {font-size:14px;color:#666;padding:4px 20px;border:1px solid #888;}
 #con01 .tab_content .tab_slider figure a:hover {border:1px solid #1361a6;color:#1361a6;}
 
+#con01 .btn {display:none;user-select:none;}
 #con01 .btn span {position:absolute;top:500px;;left:50%;color:#555;font-size:16px;transform:translateX(-50%);cursor:pointer;}
 #con01 .btn .prev {margin-left:-300px;transition:0.5s;padding:20px;}
 #con01 .btn .prev:hover {margin-left:-310px;color:#1361a6;}
@@ -80,10 +85,9 @@
 #con02 h2 {font-size:30px;font-weight:500;text-align:center;margin-bottom:100px;letter-spacing:0.1em;position:relative;}
 #con02 h2:after {content:"";display:block;width:50px;height:3px;background:#1361a6;opacity:0.3;position:absolute;bottom:-23px;left:50%;transform:translateX(-50%);}
 #con02 .contain {display:flex;flex-wrap:wrap;}
-#con02 .pic {width:50%;padding:0;padding:15px;}
-#con02 .des {width:50%;padding:30px;margin:auto;}
-#con02 .des_r {text-align:left;}
-#con02 .des_l {text-align:right;}
+#con02 .pic {width:50%;padding:15px 15px;}
+#con02 .des {width:50%;padding:15px;margin:auto;text-align:left;}
+#con02 .des_r {padding-left:100px;}
 #con02 .des h3 {font-size:24px;font-weight:700;margin-bottom:30px;}
 #con02 .des p {font-size:16px;font-weight:400;line-height:30px;color:#777;}
 
@@ -97,7 +101,7 @@
 #con03 h3 {font-size:25px;font-weight:500;letter-spacing:-0.05em;margin-bottom:10px;}
 #con03 p {font-size:15px;font-weight:400;letter-spacing:-0.05em;margin-bottom:20px;line-height:1.4;color:#777;}
 
-#con03 .itm01 {width:100%;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/sc03_01.jpg) no-repeat center -120px/cover;padding:130px 0;text-align:center;margin-bottom:30px;}
+#con03 .itm01 {width:100%;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/sc03_01.jpg) no-repeat center -180px/cover;padding:100px 0;text-align:center;margin-bottom:30px;}
 #con03 .itm01 h3 {font-size:27px;font-weight:100;letter-spacing:0.1em;margin-bottom:20px;color:#ddd;}
 #con03 .itm01 p {font-size:18px;font-weight:500;letter-spacing:-0.025em;margin-bottom:40px;color:#ddd;}
 #con03 .itm01 strong {font-size:16px;font-weight:100;letter-spacing:0.05em;color:#ddd;}

@@ -19,10 +19,19 @@ $('#main_visual .btn span.right').on('click', function(){
 
 $('.tab_menu>li').on('click', function(){
     var idx= $(this).index();
-    console.log(idx);
+    let fl= $('.tab_content .tab_slider').eq(idx).find('figure').length
+    // console.log(idx);
+    console.log(fl);
     $('.tab_content .tab_slider').eq(idx).addClass('on').siblings().removeClass('on');
     $(this).addClass('on').siblings().removeClass('on');
+
+    if (fl > 3) {
+        $('.btn').show()
+    } else if (fl < 4) {
+        $('.btn').hide()
+    };
 });
+
 
 $('.tab_slider').slick({
     infinite:false,
@@ -31,6 +40,8 @@ $('.tab_slider').slick({
     slidesToScroll:3,
     dots:true,
 });
+
+
 
 $('.btn .prev').on('click', function(){
     $('.tab_slider').slick('slickPrev');
