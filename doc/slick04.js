@@ -16,7 +16,7 @@ var mS=$('.main_slider').slick({
 $('.main_slider figure').eq(0).addClass('animation_active');
 $('#main_visual .btn li').eq(0).addClass('animation_active');
 $('#main_visual .sbar').addClass('animation_active');
-$('#main_visual .sbar2 span').css({height:100})
+$('#main_visual .sbar2 span').animate({height:100}, 1000);
 mS.on('beforeChange', function(e,s,c,n){
     $('#main_visual .sbar').removeClass('animation_active');
 });
