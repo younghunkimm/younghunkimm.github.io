@@ -25,7 +25,14 @@ mS.on('afterChange', function(e,s,c){
     $('.main_slider figure').eq(c).addClass('animation_active').siblings().removeClass('animation_active');
     $('#main_visual .btn li').eq(c).addClass('animation_active').siblings().removeClass('animation_active');
     $('#main_visual .sbar').addClass('animation_active');
-    $('#main_visual .sbar2 span').css({height:100*(c+1)})
+
+    var sbar= $('#main_visual .sbar2 span')
+    if (c < 1) {
+        sbar.removeAttr('style');
+        sbar.animate({height:100*(c+1)}, 1000);
+    } else {
+        sbar.animate({height:100*(c+1)}, 1000);
+    };
 });
 
 $('#main_visual .btn li').on('click', function(){
