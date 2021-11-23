@@ -190,7 +190,7 @@ h2 {font-size:1.4rem;font-weight:700;}
 
 
 @media (max-width:768px) {
-    html {font-size:20px;}
+    html {font-size:12px;}
     body {font-size:0.8rem;color:#333;}
     strong {color:#FF6900;}
     em {color:#0D4633}
@@ -208,9 +208,9 @@ h2 {font-size:1.4rem;font-weight:700;}
     #header .gnb {position:fixed;top:0;left:-100%;width:100%;height:100vh;background:rgba(0,0,0,0.8);padding-top:5rem;transition:0.5s;z-index:999;}
     #header .gnb.on {left:0;}
 
-    #header .gnb .depth01 {display:flex;flex-direction:column;color:#ddd;padding:0 2rem;}
+    #header .gnb .depth01 {display:flex;flex-direction:column;color:#ddd;padding:5rem 2rem;font-size:1.5rem;}
     #header .gnb .depth01>li {position:relative;}
-    #header .gnb .depth01>li>a {display:block;padding:0 2rem;line-height:3rem;border-bottom:1px solid #777;padding:0 0.75rem;}
+    #header .gnb .depth01>li>a {display:block;padding:0 2rem;line-height:4rem;border-bottom:1px solid #777;padding:0 0.75rem;}
 
     #header .h_right {display:none;line-height:1.1rem;padding:1.9rem 0;}
     #header .h_r_menu {display:flex;}
@@ -218,10 +218,10 @@ h2 {font-size:1.4rem;font-weight:700;}
     #header .h_r_menu>li.login>a {border:1px solid #98D6C2;padding:0 0.8rem;}
     
 
-    #header .gnb .depth02 {display:none;position:static;top:5rem;left:0;text-align:center;line-height:2.5;padding:0.5rem 0;width:100%;height:auto;overflow:hidden;font-size:0.75rem;transition:none;background:rgba(0,0,0,0.3);z-index:999;}
+    #header .gnb .depth02 {display:none;position:static;top:5rem;left:0;text-align:center;line-height:2.5;padding:0.5rem 0;width:100%;height:auto;overflow:hidden;font-size:1.3rem;transition:none;background:rgba(0,0,0,0.3);z-index:999;}
     #header .gnb:hover .depth02 {display:none;height:auto;}
     
-    #header .gnb .depth02>li>a {display:block;padding:0 2rem;line-height:1.5rem;text-align:left;}
+    #header .gnb .depth02>li>a {display:block;padding:0 2rem;line-height:2.5rem;text-align:left;}
     
     #header .gnb::before {content:"";display:none;width:100%;height:0;background:#0d4633e7;position:absolute;top:5rem;left:0;transition:0.5s;z-index:999;}
     #header .gnb:hover::before {height:14rem;}
@@ -322,8 +322,8 @@ h2 {font-size:1.4rem;font-weight:700;}
     
     
     #con05 {padding:7.5rem 0;text-align:center;color:#ddd;}
-    #con05 .container {display:flex;}
-    #con05 .case {padding:0 0.75rem;flex:1;}
+    #con05 .container {display:flex;flex-direction:column;}
+    #con05 .case {padding:0 0.75rem;flex:1;margin-bottom:1.5rem;}
     
     #con05 .search {flex:1;padding:6rem 0;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/sc05_01.jpg) no-repeat center center/cover;border-radius:0.25rem;}
     #con05 .search .des {text-shadow:0 0 4px #000;}
@@ -336,12 +336,12 @@ h2 {font-size:1.4rem;font-weight:700;}
     #con05 .case h3 {text-shadow:0 0 4px #000;}
     #con05 .case p {text-shadow:0 0 4px #000;}
 
-    #con05 .case .itm01 {display:flex;background:url(../img/card.png) no-repeat 1rem center/50%,#333;width:100%;height:calc(50% - 0.75rem);margin-bottom:1.5rem;border-radius:0.25rem;cursor:pointer;}
+    #con05 .case .itm01 {display:flex;background:url(../img/card.png) no-repeat 1rem center/50%,#333;padding:2rem 0;width:100%;height:calc(50% - 0.75rem);margin-bottom:1.5rem;border-radius:0.25rem;cursor:pointer;}
     #con05 .case .itm01 .text_case {margin:auto 0;padding:0 2rem;text-align:right;width:100%;}
     #con05 .case .itm01 h3 {font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;}
     #con05 .case .itm01 p {font-size:0.75rem;line-height:1.1rem;}
     
-    #con05 .case .itm02 {display:flex;background:url(../img/event01.png) no-repeat right center/cover;width:100%;height:calc(50% - 0.75rem);border-radius:0.25rem;cursor:pointer;position:relative;}
+    #con05 .case .itm02 {display:flex;background:url(../img/event01.png) no-repeat right center/cover;padding:2rem 0;width:100%;height:calc(50% - 0.75rem);border-radius:0.25rem;cursor:pointer;position:relative;}
     #con05 .case .itm02 .text_case {margin:auto 0;padding:0 2rem;text-align:left;width:100%;}
     #con05 .case .itm02 h3 {font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;}
     #con05 .case .itm02 p {font-size:0.75rem;line-height:1.1rem;}
