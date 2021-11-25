@@ -75,6 +75,14 @@ $('.notice_slider').slick({
     autoplay:true,
     arrows:false,
     vertical:true,
+    responsive:[
+        {
+            breakpoint:769,
+            settings: {
+                vertical:false,
+            }
+        }
+    ]
 });
 
 $('.up_case').on('click', function(){
