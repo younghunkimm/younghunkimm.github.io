@@ -1,13 +1,14 @@
 * {text-align:center;}
 /* html {scroll-behavior:smooth;} */
 
-#wrap {position:absolute;top:0;left:450px;text-align:center;}
+#wrap {position:absolute;top:0;left:calc(50% + 100px);transform:translateX(-50%);text-align:center;}
 .container {width:1200px;margin:0 auto;}
 h1 {font-size:30px;padding:100px 0;font-weight:700;}
 h1:after {content:"김영훈";display:block;margin:10px 0;font-size:14px;color:#333;}
 .hp {display:inline-block;border:1px solid #888;padding:15px 20px;color:#333;font-size:14px;letter-spacing:0.1em;position:relative;}
 .hp:after {content:"";display:block;width:240px;height:10px;background:rgb(255, 0, 0, 0.1);position:absolute;top:50%;right:20px;transform:translateY(-50%);z-index:-1;}
 
+.ul_box .category {animation:shake 0.5s ease-out infinite;}
 .ul_box {position:fixed;top:0;left:0;width:200px;height:100vh;background:#333;color:#fff;line-height:50px;border-right:1px solid #222;outline:2px solid #999;}
 .ul_box ul {position:absolute;top:calc(50% + 30px);left:50%;transform:translate(-50%,-50%);width:150px;}
 .ul_box ul>li a {display:block;}
@@ -24,3 +25,10 @@ h1:after {content:"김영훈";display:block;margin:10px 0;font-size:14px;color:#
 .glyph i {font-size:30px;margin-bottom:15px;}
 .glyph h3 {margin-bottom:10px;user-select:all;}
 .glyph p {user-select:all;}
+
+
+@keyframes shake {
+    0% {transform:translateY(10px);}
+    50% {transform:translateY(0);}
+    100% {transform:translateY(10px);}
+}
