@@ -6,7 +6,7 @@ $('#main_player').YTPlayer({
     containment:'#main_visual',
     autoPlay:true,
     mute:true,
-    startAt:9,
+    startAt:8,
     opacity:1,
     showControls:false,
     pauseOnFocus:false,
@@ -55,7 +55,7 @@ $('.mv01').YTPlayer({
 })
 
 $('.insta_slider').slick({
-    autoplay:true,
+    autoplay:false,
     autoplaySpeed:2000,
     centerMode:true,
     slidesToShow:8,
@@ -84,11 +84,6 @@ $('.down_case').on('click', function(){
     $('.notice_slider').slick('slickNext')
 });
 
-$('#con05 input').on('click', function(){
-    $(this).empty();
-});
-
-
 $('.mopen').on('click', function(){
     $('.gnb').toggleClass('on');
     $('.h_right').toggleClass('on');
@@ -97,18 +92,28 @@ $('.mopen').on('click', function(){
 
 $('.depth01>li>a').on('click', function(){
     if ($(window).width() < 768) {
-        $(this).next().slideToggle();
+        $(this).next().stop().slideToggle();
         $(this).parent().siblings().find('.depth02').slideUp();
     };
 });
 
 $(window).on('resize', function(){
     $('.depth02').removeAttr('style');
-})
+});
 
+$('#popup .con .close_con span').on('click', function(){
+    $('#popup').hide();
+});
 
+$('#scroll_banner .itm01').on('click', function(){
+    $('html, body').stop().animate({scrollTop:0}, 500);
+});
 
+$(window).on('scroll', function(){
+    var sct=$(window).scrollTop();
 
+    $('#scroll_banner').css({bottom:100 - sct})
+});
 
 // -----------------------------------
 });
