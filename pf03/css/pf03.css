@@ -20,10 +20,10 @@ h2 {font-size:1.4rem;font-weight:700;}
 #header .h_r_menu>li.login>a {padding:0.2rem 1rem;border:1px solid #98D6C2;position:relative;transition:0.4s;}
 #header .h_r_menu>li.login>a:hover {border:1px solid #fff;background:#fff;color:#0D4633;}
 
-#header .gnb .depth02 {position:absolute;top:5rem;left:0;text-align:center;line-height:2.5;padding:0.5rem 0;width:100%;height:0;overflow:hidden;font-size:0.7rem;transition:0.5s;z-index:999;}
+#header .gnb .depth02 {position:absolute;top:5rem;left:0;text-align:center;padding:0.5rem 0;width:100%;height:0;overflow:hidden;transition:0.5s;z-index:999;}
 #header .gnb:hover .depth02 {height:14rem;}
 
-#header .gnb .depth02>li>a {display:block;}
+#header .gnb .depth02>li>a {display:block;line-height:2.5;font-size:0.7rem;}
 #header .gnb .depth02>li>a:hover {text-shadow:0 0 2px #fff;}
 
 #header .gnb::before {content:"";display:block;width:100%;height:0;background:#0d4633e7;position:absolute;top:5rem;left:0;transition:0.5s;z-index:999;}
@@ -243,10 +243,10 @@ h2 {font-size:1.4rem;font-weight:700;}
     #header .h_r_menu>li>a {display:inline;margin-left:0.75rem;color:#98D6C2;font-size:0.7rem;}
     #header .h_r_menu>li.login>a {padding:0.2rem 1rem;border:1px solid #98D6C2;}
     
-    #header .gnb .depth02 {display:none;position:static;top:5rem;left:0;text-align:center;line-height:2.5;padding:0.5rem 0;width:100%;height:auto;overflow:hidden;font-size:0.9rem;transition:none;background:rgba(0,0,0,0.3);z-index:999;}
+    #header .gnb .depth02 {display:none;position:static;top:5rem;left:0;text-align:center;padding:0.5rem 0;width:100%;height:auto;overflow:hidden;transition:none;background:rgba(0,0,0,0.3);border-bottom:1px solid #777;z-index:999;}
     #header .gnb:hover .depth02 {display:none;height:auto;}
     
-    #header .gnb .depth02>li>a {display:block;padding:0 2rem;line-height:2.5rem;text-align:left;}
+    #header .gnb .depth02>li>a {display:block;padding:0 2rem;font-size:0.8rem;line-height:2;text-align:left;}
     #header .gnb .depth02>li>a:hover {font-weight:500;text-shadow:0 0 2px #fff;}
     
     #header .gnb::before {content:"";display:none;width:100%;height:0;background:#0d4633e7;position:absolute;top:5rem;left:0;transition:0.5s;z-index:999;}
