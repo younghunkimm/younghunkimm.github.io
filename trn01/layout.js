@@ -19,7 +19,10 @@ $('.main_slider').slick({
     pauseOnFocus:false,
 });
 
-
+$('.mopen').on('click', function(){
+    $('nav').toggleClass('on');
+    $('.header .right').toggleClass('on')
+});
 
 
 
