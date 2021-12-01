@@ -6,7 +6,7 @@ var logo = $('.logo_menu li')
 visual.slick({
     arrows:false,
     fade:true,
-    autoplay:false,
+    autoplay:true,
     speed:500,
     autoplaySpeed:4500,
     infinite:true,
