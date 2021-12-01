@@ -24,11 +24,23 @@ logo.on('click', function(){
     var idx= $(this).index();
     // console.log(idx);
     visual.slick('slickGoTo', idx)
-})
+});
 
 $('.h_left').on('click', function(){
-    $('.nav_box').toggleClass('on');
+    $('.gnb').toggleClass('on');
     $('#header').toggleClass('on');
+});
+
+$('.depth02.tc').hide();
+$('.depth01>li>a').on('click', function(){
+    if ($(window).width() < 769) {
+        $(this).next().stop().slideToggle();
+        $(this).parent().siblings().find('.depth02').stop().slideUp();
+    };
+});
+
+$(window).on('resize', function(){
+    $('.depth02').removeAttr('style');
 })
 
 $(window).on('scroll', function(){
