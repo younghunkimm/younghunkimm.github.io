@@ -208,12 +208,13 @@ body.noScroll {overflow:hidden;}
 
 
 
-    #header {position:fixed;top:0;left:0;min-width:auto;width:100%;height:5rem;padding:0 0.75rem;line-height:5rem;color:#fff;border:0 solid #333;transition:background 0.4s;z-index:1000;}
+    #header {position:fixed;top:0;left:0;min-width:auto;width:100%;height:3rem;padding:0 0.75rem;line-height:3rem;color:#fff;border:0 solid #333;transition:background 0.4s;z-index:1000;}
     #header.on {background:#1E1D24;}
     #header.active {background:#1E1D24;}
     #header .container {display:flex;justify-content:space-between;}
-    #header h1 {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
-    #header i {font-size:1.2rem;line-height:5rem;cursor:pointer;}
+    #header h1 {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.8);}
+    #header i {font-size:1.2rem;line-height:3rem;cursor:pointer;}
+    #header i.xi-bars {font-size:1.3rem;}
     #header i.xi-search {margin-left:1rem;}
     
     .gnb_wrap {position:fixed;top:0;left:0;background:rgba(0,0,0,0.8);min-width:auto;width:100%;height:100%;color:#fff;opacity:0;visibility:hidden;transition:1s;z-index:999;}
