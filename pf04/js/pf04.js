@@ -27,11 +27,11 @@ logo.on('click', function(){
 });
 
 $('.h_left').on('click', function(){
+    $('.gnb_wrap').toggleClass('on');
     $('.gnb').toggleClass('on');
     $('#header').toggleClass('on');
 });
 
-$('.depth02.tc').hide();
 $('.depth01>li>a').on('click', function(){
     if ($(window).width() < 769) {
         $(this).next().stop().slideToggle();
@@ -60,7 +60,7 @@ $('.room_slider').on('init reInit afterChange', function(e,s,c){
     $('#sc01 .snum').text("0" + (i+1) + " / " + "0" + s.slideCount);
 });
 
-$('.room_slider').slick({
+var room = $('.room_slider').slick({
     arrows:false,
     asNavFor:'.r_text_slider',
     draggable:true,
