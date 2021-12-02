@@ -30,6 +30,7 @@ $('.h_left').on('click', function(){
     $('.gnb_wrap').toggleClass('on');
     $('.gnb').toggleClass('on');
     $('#header').toggleClass('on');
+    $('html, body').toggleClass('noScroll')
 });
 
 $('.depth01>li>a').on('click', function(){
