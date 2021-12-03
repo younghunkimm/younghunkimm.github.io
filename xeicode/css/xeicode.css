@@ -1,6 +1,7 @@
 * {text-align:center;}
 /* html {scroll-behavior:smooth;} */
 
+
 #wrap {position:absolute;top:0;left:calc(50% + 100px);transform:translateX(-50%);text-align:center;}
 .container {width:1200px;margin:0 auto;}
 h1 {font-size:30px;padding:100px 0;font-weight:700;}
@@ -26,6 +27,9 @@ h1:after {content:"김영훈";display:block;margin:10px 0;font-size:14px;color:#
 .glyph h3 {margin-bottom:10px;user-select:all;}
 .glyph p {user-select:all;}
 
+.toTop {position:fixed;bottom:0;right:0;padding:15px 20px;background:rgba(255, 110, 110, 0.5);cursor:pointer;}
+.toTop i {display:block;margin-bottom:5px;font-size:20px;}
+.toTop span {font-size:16px;}
 
 @keyframes shake {
     0% {transform:translateY(10px);}
