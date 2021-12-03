@@ -29,12 +29,21 @@ logo.on('click', function(){
 $('.h_left').on('click', function(){
     $('.gnb_wrap').toggleClass('on');
     $('.gnb').toggleClass('on');
-    $('#header').toggleClass('on');
+
+    var sct = $(window).scrollTop()
+    // console.log(sct);
+    if (sct > 0) {
+        $('#header').addClass('on')
+    } else {
+        $('#header').toggleClass('on');
+    };
+
     if ($('.search_wrap').hasClass('on')) {
         $('html, body').addClass('noScroll')
     } else {
         $('html, body').toggleClass('noScroll');
-    }
+    };
+
     $('.search_wrap').removeClass('on');
 });
 
@@ -63,7 +72,7 @@ $(window).on('scroll', function(){
 
 // sc01 ---------------------
 $('.room_slider').on('init reInit afterChange', function(e,s,c){
-    console.log(c,s.slideCount);
+    // console.log(c,s.slideCount);
     var i = (c ? c : 0);
     $('#sc01 .snum').text("0" + (i+1) + " / " + "0" + s.slideCount);
 });
@@ -100,7 +109,7 @@ $('#sc01 i.xi-angle-right-thin').on('click', function(){
 
 // sc02 ---------------------
 $('.dining_slider').on('init reInit afterChange', function(e,s,c){
-    console.log(c,s.slideCount);
+    // console.log(c,s.slideCount);
     var i = (c ? c : 0);
     $('#sc02 .snum').text("0" + (i+1) + " / " + "0" + s.slideCount);
 });
