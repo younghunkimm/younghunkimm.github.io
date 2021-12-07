@@ -15,11 +15,20 @@ $('.main_visual').on('afterChange', function(e,s,c){
     $('.main_visual figure').eq(c+1).addClass('on').siblings().removeClass('on');
 });
 
+$('.mopen').on('click', function(){
+    $('#header').toggleClass('on');
+});
 
+$('nav>ul>li>a').on('click', function(){
+    if ($(window).width() <= 768) {
+        $(this).next().stop().slideToggle();
+        $(this).parent().siblings().find('.submenu').stop().slideUp();
+    }
+});
 
-
-
-
+$(window).on('resize', function(){
+    $('.submenu').removeAttr('style');
+});
 
 
 
