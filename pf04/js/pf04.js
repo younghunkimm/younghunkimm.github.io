@@ -47,6 +47,11 @@ $('.h_left').on('click', function(){
     $('.search_wrap').removeClass('on');
 });
 
+$('.gnb_close_bg').on('click', function(){
+    $('.gnb_wrap, .gnb').removeClass('on');
+    $('html, body').removeClass('noScroll')
+})
+
 $('.depth01>li>a').on('click', function(){
     if ($(window).width() < 769) {
         $(this).next().stop().slideToggle();
@@ -70,7 +75,6 @@ $(window).on('scroll', function(){
     };
 });
 
-// sc01 ---------------------
 $('.room_slider').on('init reInit afterChange', function(e,s,c){
     // console.log(c,s.slideCount);
     var i = (c ? c : 0);
@@ -83,7 +87,7 @@ var room = $('.room_slider').slick({
     draggable:true,
     responsive:[
         {
-            breakpoint:768,
+            breakpoint:769,
             settings: {
                 slidesToShow:1,
                 centerMode:true,
@@ -107,7 +111,6 @@ $('#sc01 i.xi-angle-right-thin').on('click', function(){
     $('.room_slider').slick('slickNext');
 });
 
-// sc02 ---------------------
 $('.dining_slider').on('init reInit afterChange', function(e,s,c){
     // console.log(c,s.slideCount);
     var i = (c ? c : 0);
@@ -120,7 +123,7 @@ $('.dining_slider').slick({
     draggable:true,
     responsive:[
         {
-            breakpoint:768,
+            breakpoint:769,
             settings: {
                 slidesToShow:1,
                 centerMode:true,
@@ -144,14 +147,13 @@ $('#sc02 i.xi-angle-right-thin').on('click', function(){
     $('.dining_slider').slick('slickNext');
 });
 
-// sc03 ---------------------
 $('.event_slider').slick({
     arrows:false,
     slidesToShow:3,
     swipeToSlide:true,
     responsive:[
         {
-            breakpoint:768,
+            breakpoint:769,
             settings: {
                 slidesToShow:1,
                 centerMode:true,
@@ -183,6 +185,11 @@ $('.search_close').on('click', function(){
     $('html, body').removeClass('noScroll');
 })
 
+$('.search_close_bg').on('click', function(){
+    $('.search_wrap').removeClass('on');
+    $('html, body').removeClass('noScroll');
+})
+
 $('.h_right i.xi-user-o').on('click', function(){
     $('.login_wrap, .login').toggleClass('on');
     if ($('.gnb_wrap' && '.search_wrap').hasClass('on')) {
@@ -198,6 +205,13 @@ $('.login_close').on('click', function(){
     $('.login_wrap, .login').removeClass('on');
     $('html, body').removeClass('noScroll');
 });
+
+$('.login_close_bg').on('click', function(){
+    $('.login_wrap, .login').removeClass('on');
+    $('html, body').removeClass('noScroll');
+});
+
+
 
 // ---------------------------------------------------------------
 })
