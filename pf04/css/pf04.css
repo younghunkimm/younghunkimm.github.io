@@ -239,7 +239,7 @@ body.noScroll {overflow:hidden;}
 .login_bottom>a {display:none;}
 .login_bottom .members {display:flex;}
 .login_bottom .members .itm {flex:1;display:block;margin:0.2rem;padding:8rem 0;position:relative;overflow:hidden;}
-.login_bottom .members .itm .des {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);}
+.login_bottom .members .itm h3 {color:#fff;}
 
 .login_bottom .members .itm span {position:absolute;background:#ddd;transition:0.5s;}
 .login_bottom .members .itm span:nth-of-type(1) {top:0;left:0;display:block;width:0;height:1px;}
