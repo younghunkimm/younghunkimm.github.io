@@ -78,7 +78,7 @@ hr.mhr:after {content:"\e905";display:inline-block;font-family:xeicon;background
 .con02 .brand_wrap .itm03 {background:#666;} 
 */
 
-.con03 {background:#F5F2ED, url(../img/main_ourbg_icn.png) no-repeat right bottom;}
+.con03 {background:#F5F2ED url(../img/main_ourbg_icn.png) no-repeat right bottom;}
 .con03 .container {display:flex;align-items:center;width:80rem;margin:0 auto;}
 .con03 .container>* {flex:1;}
 .con03 .container img {width:100%;}
@@ -95,7 +95,7 @@ hr.mhr:after {content:"\e905";display:inline-block;font-family:xeicon;background
 .con03.on .txt {opacity:1;transform:translateY(0);transition:0.5s 0.2s;}
 
 
-.con04 {background:#F5F2ED, url(../img/main_pebg.png) no-repeat center center/cover;}
+.con04 {background:#f4f1ec url(../img/main_pebg.png) no-repeat center center/cover;}
 .con04 .container {display:flex;align-items:center;width:80rem;margin:0 auto;}
 .con04 .container>* {flex:1;}
 .con04 .container img {width:100%;}
