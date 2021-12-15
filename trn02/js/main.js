@@ -9,7 +9,8 @@ $('#main').fullpage({
         $('.section').eq(idx).addClass('on').siblings().removeClass('on');
         $('.navbar>li').eq(idx).addClass('on').siblings().removeClass('on');
         $('.now').text(txt);
-        idx == 0 ? $('.header').animate({top:0}, 500) : $('.header').animate({top:-100}, 500)
+        idx == 0 ? $('.header').animate({top:0}, 500) : $('.header').animate({top:-100}, 500);
+        idx > 0 ? $('.wheel').fadeOut() : $('.wheel').fadeIn();
     },
 });
 
@@ -30,9 +31,21 @@ $('.b_slider').on('afterChange', function(e,s,c){
     $('.brand_name li').eq(c).addClass('on').siblings().removeClass('on');
 });
 
+$('.all_open').on('click', function(){
+    $(this).toggleClass('on');
+    $('.all_menu').slideToggle();
+    if ($(this).hasClass('on')) {
+        $.fn.fullpage.setAllowScrolling(false);
+    } else {
+        $.fn.fullpage.setAllowScrolling(true);
+    };
+});
 
-
-
+$('.all_menu a').on('click', function(){
+    $('.all_menu').slideUp();
+    $.fn.fullpage.setAllowScrolling(true);
+    $('.all_open').removeClass('on');
+});
 
 
 
