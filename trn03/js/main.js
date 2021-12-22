@@ -32,7 +32,7 @@ mainSlider.on('slideChangeTransitionStart', ()=> {
 });
 
 const productSlider = new Swiper('.pr_slider', {
-    loop:false,
+    loop:true,
     slidesPerView: 4,
     spaceBetween: 30,
     pagination: {
@@ -48,7 +48,7 @@ const productSlider = new Swiper('.pr_slider', {
 const SEC = document.querySelectorAll('.action');
 const WT=window.innerHeight;
 
-window.addEventListener("scroll", ()=>{
+window.addEventListener('scroll', ()=>{
         let sct=window.scrollY;
         SEC.forEach(e=>{
             let secTop = e.offsetTop;
@@ -60,9 +60,43 @@ window.addEventListener("scroll", ()=>{
         });
 });
 
+const productSlider02 = new Swiper('.pr2_slider', {
+    loop:true,
+    slidesPerView: 2,
+    spaceBetween: 120,
+    autoplay: {
+        delay: 2000,
+    },
+});
 
 
+//swiper addClass on
+const sItm = document.querySelectorAll('.sc04 .swiper-slide');
+// $('.swiper-slide');
+const itm = document.querySelector('.sc04 .swiper-slide-active');
+itm.classList.add('on');
+productSlider02.on('slideChangeTransitionEnd', ()=>{
+    // let idx = productSlider02.realIndex;
+    // console.log(idx);
+    // sItm[idx+3].classList.add('on');
+    const itm = document.querySelector('.sc04 .swiper-slide-active');
+    itm.classList.add('on');
+});
+
+productSlider02.on('slideChangeTransitionStart', ()=>{
+    sItm.forEach(e => e.classList.remove('on'));
+});
 
 
-
-
+const productSlider03 = new Swiper('.pr3_slider', {
+    loop:true,
+    slidesPerView: 1,
+    spaceBetween: 120,
+    autoplay: {
+        delay: 2000,
+    },
+    navigation: {
+        nextEl: '.pr_btn .btn_next',
+        prevEl: '.pr_btn .btn_prev',
+    },
+});
