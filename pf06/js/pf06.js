@@ -130,9 +130,7 @@ $('.depth02 dt').on('click', function(){
 });
 
 $(window).on('resize', function(){
-    if ($(window).width() <= 768) {
-        $('.depth02').removeAttr('style');
-    };
+    $('.depth02').removeAttr('style');
 });
 
 if ($(window).width() <= 768) {
