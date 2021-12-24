@@ -115,6 +115,7 @@ $('.mopen').on('click', function(){
     $('.hd_top').toggleClass('on');
     $(this).toggleClass('active');
     $('.login').toggleClass('on');
+    $('html, body').toggleClass('no_scroll');
 });
 
 $('.depth01>li>a').on('click', function(){
