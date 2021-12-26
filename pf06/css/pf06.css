@@ -94,9 +94,12 @@ body {font-size:0.8rem;}
 #main_visual .main_menu .menu01>div #search input::-webkit-search-cancel-button {display:none;}
 #main_visual .main_menu .menu01>div #search input::-webkit-input-placeholder {color:#ddd;}
 #main_visual .main_menu .menu01>div #search button {color:#fff;margin-left:0.5rem;}
+
 #main_visual .main_menu .menu02>div {background:#199DA3;}
+#main_visual .main_menu .menu02 .mainBtn>a:hover {background:#228b92;color:#fff;}
 
 #main_visual .main_menu .menu03>div {background:#2CA48F;}
+#main_visual .main_menu .menu03 .mainBtn>a:hover {background:#268d7c;color:#fff;}
 
 
 .content {padding:3.5rem 0;}
@@ -164,16 +167,16 @@ body {font-size:0.8rem;}
 .sc01 .info03 .content_box>div>ul>li span:after {content:"";display:block;clear:both;}
 
 
-
-.sc01 .subBtn {display:block;width:100%;line-height:1.75rem;border:1px solid rgba(255,255,255,0.7);text-align:center;color:rgba(255,255,255,0.7);font-size:0.7rem;}
+.sc01 .subBtn {display:block;width:100%;line-height:1.75rem;border:1px solid rgba(255,255,255,0.7);text-align:center;color:#eee;font-size:0.7rem;}
 .sc01 .info04 {display:flex;flex-direction:column;justify-content:space-between;padding:2.5rem;background:#627AD0;}
 .sc01 .info04 h3 {font-size:0.8rem;font-weight:700;color:#fff;}
 .sc01 .info04 p {font-size:0.7rem;font-weight:300;color:#f2f2f2;line-height:1.6;}
+.sc01 .info04 .subBtn:hover {background:#576dbb;color:#fff;}
 
-.sc01 .subBtn {display:block;width:100%;line-height:1.75rem;border:1px solid rgba(255,255,255,0.7);text-align:center;color:rgba(255,255,255,0.7);font-size:0.7rem;}
 .sc01 .info05 {display:flex;flex-direction:column;justify-content:space-between;padding:2.5rem;background:#3298B7;}
 .sc01 .info05 h3 {font-size:0.8rem;font-weight:700;color:#fff;}
 .sc01 .info05 p {font-size:0.7rem;font-weight:300;color:#f2f2f2;line-height:1.6;}
+.sc01 .info05 .subBtn:hover {background:#2b85a0;color:#fff;}
 
 
 .sc02 {background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../img/banner_bg.jpg) no-repeat center -150px/cover;padding:12.5rem 0 3.5rem 0;}
