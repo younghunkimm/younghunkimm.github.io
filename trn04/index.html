@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../lib/css/slick.css">
     <link rel="stylesheet" href="./css/layout.css?ver=1.1">
     <script src="../lib/js/jquery-1.12.4.min.js"></script>
+    <script src="../lib/js/jquery-ui.min.js"></script>
     <script src="../lib/js/slick.min.js"></script>
     <script src="./js/main.js?ver=1.1"></script>
 </head>
@@ -41,7 +42,13 @@
             </ul>
         </nav>
         <div class="search">
-            제품검색 <i class="xi-search"></i>
+            <a href="#!">제품검색 <i class="xi-search"></i></a>
+        </div>
+        <div class="search_form">
+            <form action="">
+                <input type="search">
+                <button>SEARCH</button>
+            </form>
         </div>
     </header>
 
@@ -286,8 +293,48 @@
 
 
     <footer id="footer" class="footer">
-
+        <div class="top">
+            <ul>
+                <li><a href="#!">개인정보처리방침</a></li>
+                <li><a href="#!">이용약관</a></li>
+                <li><a href="#!">이메일무단수집거부</a></li>
+            </ul>
+            <div class="family_link">
+                <div class="link">
+                    <ul>
+                        <li><a href="#!" target="_blank">site01</a></li>
+                        <li><a href="#!" target="_blank">site02</a></li>
+                        <li><a href="#!" target="_blank">site03</a></li>
+                        <li><a href="#!" target="_blank">site04</a></li>
+                    </ul>
+                    <a href="#!">family site <i class="xi-arrow-top"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bottom">
+            <div class="footer_logo">
+                <img src="./img/logo_footer.jpg" alt="">
+            </div>
+            <address>
+                서울특별시 종로구 종로33길 31 TEL : 02-740-7755 FAX : 02-740-7700
+                <strong>COPYRIGHT &copy; SAMYANG CORPORATION. ALL RIGHTS RESERVED.</strong>
+            </address>
+        </div>
     </footer>
+    <div id="to_top">
+        <a href="#">
+            <i class="xi-arrow-top"></i>
+        </a>
+    </div>
+    <div id="pop_up">
+        <p>
+            이 사이트는 개인포폴용으로 제작되었으며,<br>
+            사용된 이미지와 아이콘의 저작권은 따로 있음을 밝힙니다.<br>
+            상업적인 용도로의 사용은 법적 책임이 따릅니다.
+        </p>
+        <a href="#">close</a>
+    </div>
 </div>
 </body>
 </html>

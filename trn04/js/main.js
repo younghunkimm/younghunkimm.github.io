@@ -1,9 +1,25 @@
 $(function(){
 // -------------------------------------------------
+$('#pop_up').draggable();
+
+$('#pop_up a').on('click', function(){
+    $(this).parent().fadeOut();
+
+    return false;
+});
+
 $(window).on('scroll', ()=>{
     let sct=$(window).scrollTop();
+
     sct > 0 ? $('#header').addClass('on') : $('#header').removeClass('on');
+    sct > 500 ? $('#to_top').fadeIn() : $('#to_top').fadeOut();
+    sct > sTop ? $('#solution').addClass('on') : $('#solution').removeClass('on');
+    sct > pTop ? $('#product').addClass('on') : $('#product').removeClass('on');
 });
+
+$('#header .search').on('click', function(){
+    $('#header .search_form').stop().slideToggle()
+})
 
 $('.main_slider').slick({
     arrows:false,
@@ -38,13 +54,20 @@ $('.pr_slider').slick({
     dots:false,
 });
 
+$('.family_link .link>a').on('click', function(e){
+    // e.preventDefault();
+    $(this).prev().stop().slideToggle();
+    $(this).find('i').toggleClass('on');
+    return false;
+});
 
+$('#to_top a').on('click', e => {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, 1000, 'swing');
+});
 
-
-
-
-
-
+let sTop = $('#solution').offset().top - 200;
+let pTop = $('#product').offset().top - 200;
 
 
 
