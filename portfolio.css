@@ -1,0 +1,67 @@
+:root {
+    --mc : #FAAE67;
+    --sc : #D65490;
+    --lc : #f7f7f7;
+    --dc : #444444;
+}
+
+body {color:var(--dc);}
+
+#wrap {min-width:95rem;}
+
+#header h1 {position:fixed;top:3rem;left:3rem;z-index:999;}
+#header nav {position:fixed;top:50%;right:3rem;transform:translateY(-50%);z-index:999;}
+#header .cover_btn {position:fixed;top:3rem;right:3rem;z-index:999;}
+#header .cover_btn i {font-size:1.5rem;padding:0.5rem;background:var(--lc);border-radius:50%;}
+
+.section {background:url(./lib/base/bg_pattern01.png);}
+.container {display:grid;grid-template-columns:repeat(2, 1fr);gap:2rem;align-items:center;width:70rem;margin:0 auto;}
+
+.intro figure {position:relative;}
+.intro figure:after {content:"";position:absolute;top:3rem;right:3rem;display:block;width:5rem;height:5rem;background:linear-gradient(to right, var(--sc), var(--mc));border-radius:50%;opacity:0.5;animation:int_movie 2s infinite linear;}
+.intro figure img {width:100%;animation:int_movie 2s infinite linear;}
+
+@keyframes int_movie {
+    0% {border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;}
+    50% {border-radius:73% 27% 46% 54% / 51% 54% 46% 49%;}
+    100% {border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;}
+}
+
+.intro .slogan h2 {font-size:3rem;font-weight:700;margin-bottom:2rem;}
+.intro .slogan p {font-size:0.75rem;font-weight:300;margin-bottom:1rem;}
+.intro .slogan strong {display:block;font-size:1rem;font-weight:500;}
+
+#header nav li a {position:relative;display:block;width:3rem;height:1rem;text-indent:-99999px;}
+#header nav li a:after {content:"";position:absolute;top:0.35rem;right:0;display:block;width:30%;height:0.3rem;background:var(--dc);border-radius:0.15rem;transition:0.3s;}
+#header nav li.on a:after {width:70%;}
+
+
+
+
+
+
+
+
+
+
+
+#footer .toTop {position:fixed;bottom:3rem;right:3rem;z-index:999;}
+#footer .toTop i {font-size:1.5rem;padding:0.5rem;background:var(--lc);border-radius:50%;}
+#footer address {position:fixed;bottom:3rem;left:3rem;z-index:999;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
