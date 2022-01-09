@@ -53,6 +53,7 @@ $(function(){
     $('.menu_open').on('click', function(){
         $(this).toggleClass('on');
         $('nav').slideToggle();
+        $('html, body').toggleClass('no_scroll');
     });
 
     if ($(window).width() <= 768) {

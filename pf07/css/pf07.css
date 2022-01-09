@@ -275,6 +275,8 @@ main {margin-left:10rem;}
 
 
 @media (max-width:768px) {
+    .no_scroll {overflow:hidden;}
+
     h3 {display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
     h3>span {font-size:1.5rem;font-weight:300;color:var(--sc03);font-family: 'Noto Serif', serif;}
     h3:before {content:"";display:block;width:100%;height:1px;background:var(--dd);margin-right:1.1rem;}
