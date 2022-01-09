@@ -558,6 +558,9 @@ main {margin-left:10rem;}
 
 
 @media (max-width:500px) {
+    #header .depth01>li>a {font-size:0.9rem;width:6rem;}
+    #header .depth01>li.on .sub_menu {left:6rem;width:calc(100% - 6rem);}
+    #header .depth02>li>a {font-size:0.8rem;}
     #main_visual figure .txt h2 {font-size:5vw;}
     #main_visual figure .txt p {font-size:3vw;}
     #announcements .tab_wrapper .tab_menu ul>li>a strong {font-size:0.65rem;}
