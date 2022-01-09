@@ -439,7 +439,7 @@ main {margin-left:10rem;}
     #news .news_wrapper .lux {border:1px solid var(--sc03);}
     #news .news_wrapper .lux h4 {background:var(--sc03);}
     
-    #news .subscribe {position:absolute;bottom:0;left:50%;transform:translate(-50%,2rem);width:0;text-align:center;padding:1.5rem 0.5rem;border-radius:0.5rem;box-shadow:0.15rem 0.15rem 0.5rem rgba(0,0,0,0.15);background:#fff;white-space:nowrap;transition:width 0.5s;}
+    #news .subscribe {position:absolute;bottom:0;left:50%;transform:translate(-50%,2rem);width:0;text-align:center;padding:1.5rem 0.5rem;border-radius:0.5rem;box-shadow:0.15rem 0.15rem 0.5rem rgba(0,0,0,0.15);background:#fff;white-space:nowrap;transition:width 0.5s;overflow:hidden;}
     #news .subscribe label {display:block;font-family: 'Gowun Batang', serif;font-size:1rem;margin-bottom:1rem;}
     #news .subscribe form {display:flex;flex-direction:column;justify-content:space-between;width:100%;height:auto;margin:0 auto;border:none;}
     #news .subscribe input {border:1px solid var(--dd);background:none;padding:0.5rem 1rem;width:100%;margin-bottom:0.5rem;}
