@@ -56,6 +56,15 @@ $(function(){
         $('html, body').toggleClass('no_scroll');
     });
 
+    $('.menu_open').on('scroll touchmove mousewheel', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        return false;
+    });
+
+    $('menu_open').off('scroll touchmove mousewheel');
+
     if ($(window).width() <= 768) {
         $('.depth01>li').eq(0).addClass('on');
     };
