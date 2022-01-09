@@ -50,9 +50,11 @@ $(function(){
         $('nav').slideToggle();
     });
 
-    $('.menu_open').on('scroll touchmove mousewheel', function(e){
-        e.preventDefault();
-        e.stopPropagation();
+    $('nav, header').on('scroll touchmove mousewheel', function(e){
+        if ($('.menu_open').hasClass('on')) {
+            e.preventDefault();
+            e.stopPropagation();
+        };
 
         return false;
     });
