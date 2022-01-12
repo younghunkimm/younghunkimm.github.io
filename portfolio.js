@@ -21,17 +21,20 @@ let typed01 = new Typed('.typed01', {
     loop: false,
 });
 
+$('.cover_btn').on('click', function(){
+    $('#cover').fadeToggle();
+});
 
+let cloneMenu = $('nav>ul').clone();
+$('#cover').append(cloneMenu);
 
+$('#cover a').on('click', function(){
+    $('#cover').fadeOut();
+});
 
-
-
-
-
-
-
-
-
+$('#cover').on('scroll wheel touchmove', function(){
+    return false;
+});
 
 
 
