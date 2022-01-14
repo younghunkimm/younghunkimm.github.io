@@ -22,6 +22,7 @@ let typed01 = new Typed('.typed01', {
 });
 
 $('.cover_btn').on('click', function(){
+    $(this).toggleClass('on');
     $('#cover').fadeToggle();
 });
 

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-
 :root {
     --mc : #FAAE67;
     --sc : #D65490;
@@ -14,54 +12,39 @@ body {color:var(--dc);}
 
 #header h1 {position:fixed;top:3rem;left:3rem;z-index:999;}
 #header nav {position:fixed;top:50%;right:3rem;transform:translateY(-50%);z-index:999;}
-#header .cover_btn {position:fixed;top:3rem;right:3rem;cursor:pointer;z-index:999;}
-#header .cover_btn i {font-size:1.5rem;padding:0.5rem;background:var(--lc);border-radius:50%;}
+#header .cover_btn {display:block;position:fixed;top:3rem;right:3rem;width:1.5rem;height:0.7rem;cursor:pointer;z-index:9999;}
+#header .cover_btn span {position:absolute;display:block;background:var(--dc);width:100%;height:2px;transition:0.5s;}
+#header .cover_btn.on span {background:var(--lc);}
+
+#header .cover_btn span:nth-child(1) {top:0;right:0;width:85%;}
+#header .cover_btn span:nth-child(3) {top:50%;right:0;width:70%;}
+#header .cover_btn span:nth-child(2) {top:50%;right:0;width:70%;}
+#header .cover_btn span:nth-child(4) {top:100%;left:0;}
+
+#header .cover_btn.on span:nth-child(1) {right:3rem;opacity:0;}
+#header .cover_btn.on span:nth-child(3) {animation:bar1 1s both;}
+#header .cover_btn.on span:nth-child(2) {animation:bar2 1s both;}
+#header .cover_btn.on span:nth-child(4) {left:3rem;opacity:0;}
+
+@keyframes bar1 {
+    0% {right:0;}
+    20% {right:50%;transform:translateX(50%);width:1px;}
+    40% {right:50%;transform:translateX(50%) rotate(45deg);}
+    100% {width:85%;right:50%;transform:translateX(50%) rotate(45deg);}
+}
+@keyframes bar2 {
+    0% {right:0;}
+    20% {right:50%;transform:translateX(50%);width:1px;}
+    40% {rigth:50%;transform:translateX(50%) rotate(-45deg);}
+    100% {width:85%;right:50%;transform:translateX(50%) rotate(-45deg);}
+}
 
 #header nav li a {position:relative;display:block;width:3rem;height:1rem;text-indent:-99999px;}
 #header nav li a:after {content:"";position:absolute;top:0.35rem;right:0;display:block;width:30%;height:0.3rem;background:var(--dc);border-radius:0.15rem;transition:0.3s;}
 #header nav li.on a:after {width:70%;}
 
 .section {background:url(./lib/base/bg_pattern01.png);}
-
-.section .mockup {background:url(./lib/base/mockup.png) no-repeat center top/cover;padding:2.5rem 4.2rem 5.5rem 4.2rem;}
-.section .mockup figure {position:relative;padding-bottom:60%;overflow:hidden;}
-.section .mockup figure img {position:absolute;top:0;left:0;max-width:100%;transition:5s linear;cursor:pointer;}
-.section .mockup figure:hover img {transform:translateY(-100%);top:100%;}
-.section:nth-child(odd) .mockup {order:1;}
-
-.section .description h3 {font-size:2rem;font-weight:300;margin-bottom:2rem;font-family: 'Ubuntu', sans-serif;}
-.section .description p {font-size:0.75rem;font-weight:300;margin-bottom:2rem;}
-.section .description dl {display:inline-flex;line-height:1.5rem;border-bottom:1px solid var(--gc);}
-.section .description dl dt {width:7rem;}
-.section .description dl dt:before {content:"-";margin-right:0.5rem;}
-.section .description dl:last-of-type {margin-bottom:2rem;}
-.section .description dd span {display:inline-block;width:1rem;height:1rem;border-radius:50%;vertical-align:middle;}
-.section .description dd strong {vertical-align:middle;margin-right:1rem;}
-
-.portfolio_01 .description dd span:nth-of-type(1) {background:#FF0000;}
-.portfolio_01 .description dd span:nth-of-type(2) {background:#00FF00;}
-.portfolio_01 .description dd span:nth-of-type(3) {background:#0000FF;}
-
-.portfolio_02 .description dd span:nth-of-type(1) {background:#333333;}
-.portfolio_02 .description dd span:nth-of-type(2) {background:#666666;}
-.portfolio_02 .description dd span:nth-of-type(3) {background:#999999;}
-
-.portfolio_03 .description dd span:nth-of-type(1) {background:#FF0000;}
-.portfolio_03 .description dd span:nth-of-type(2) {background:#00FF00;}
-.portfolio_03 .description dd span:nth-of-type(3) {background:#0000FF;}
-
-.portfolio_04 .description dd span:nth-of-type(1) {background:#333333;}
-.portfolio_04 .description dd span:nth-of-type(2) {background:#666666;}
-.portfolio_04 .description dd span:nth-of-type(3) {background:#999999;}
-
-.portfolio_05 .description dd span:nth-of-type(1) {background:#FF0000;}
-.portfolio_05 .description dd span:nth-of-type(2) {background:#00FF00;}
-.portfolio_05 .description dd span:nth-of-type(3) {background:#0000FF;}
-
-.section .description ul {display:flex;gap:0.5rem;}
-.section .description ul a {display:block;font-size:1rem;font-weight:300;color:var(--lc);line-height:3rem;padding:0 2rem;background:linear-gradient(to right, var(--mc), var(--sc));border-radius:1rem;}
-
-.container {display:grid;grid-template-columns:repeat(2, 1fr);gap:2rem;align-items:center;width:70rem;margin:0 auto;}
+.container {display:grid;grid-template-columns:repeat(2, 1fr);gap:2rem;align-items:center;width:80rem;margin:0 auto;}
 
 .intro figure {position:relative;}
 .intro figure:after {content:"";position:absolute;top:3rem;right:3rem;display:block;width:5rem;height:5rem;background:linear-gradient(to right, var(--sc), var(--mc));border-radius:50%;opacity:0.5;animation:int_movie 2s infinite linear;}
@@ -84,6 +67,45 @@ body {color:var(--dc);}
     to {top:0.6rem;}
 }
 
+.section .mockup {position:relative;width:100%;height:30rem;background:url(./lib/base/mockup.png) no-repeat center bottom/contain;}
+.section .mockup figure {position:absolute;bottom:7.7rem;left:4.7rem;width:29.6rem;height:17.6rem;overflow:hidden;}
+.section .mockup figure img {position:absolute;top:0;left:0;max-width:100%;transition:5s linear;cursor:pointer;}
+.section .mockup figure:hover img {transform:translateY(-100%);top:100%;}
+.section:nth-child(odd) .mockup {order:1;}
+
+.section .description h3 {font-size:2rem;font-weight:500;margin-bottom:1rem;}
+.section .description p {font-size:1rem;font-weight:300;margin-bottom:2rem;}
+.section .description dl {display:flex;line-height:2rem;}
+.section .description dl:last-of-type {margin-bottom:2rem;}
+.section .description dl dt {width:7rem;}
+.section .description dd {font-weight:300;}
+.section .description dd span {display:inline-block;width:0.9rem;height:0.9rem;border-radius:50%;vertical-align:middle;}
+.section .description dd strong {margin-right:1rem;font-weight:300;vertical-align:middle;}
+
+.portfolio_01 .description h3 {color:#9D1C20;}
+.portfolio_01 .description dd span:nth-of-type(1) {background:#9D1C20;}
+.portfolio_01 .description dd span:nth-of-type(2) {background:#253A73;}
+.portfolio_01 .description dd span:nth-of-type(3) {background:#B6985A;}
+
+.portfolio_02 .description dd span:nth-of-type(1) {background:#333333;}
+.portfolio_02 .description dd span:nth-of-type(2) {background:#666666;}
+.portfolio_02 .description dd span:nth-of-type(3) {background:#999999;}
+
+.portfolio_03 .description dd span:nth-of-type(1) {background:#FF0000;}
+.portfolio_03 .description dd span:nth-of-type(2) {background:#00FF00;}
+.portfolio_03 .description dd span:nth-of-type(3) {background:#0000FF;}
+
+.portfolio_04 .description dd span:nth-of-type(1) {background:#333333;}
+.portfolio_04 .description dd span:nth-of-type(2) {background:#666666;}
+.portfolio_04 .description dd span:nth-of-type(3) {background:#999999;}
+
+.portfolio_05 .description dd span:nth-of-type(1) {background:#FF0000;}
+.portfolio_05 .description dd span:nth-of-type(2) {background:#00FF00;}
+.portfolio_05 .description dd span:nth-of-type(3) {background:#0000FF;}
+
+.section .description ul {display:flex;gap:0.5rem;}
+.section .description ul a {display:block;font-size:1rem;font-weight:300;color:var(--lc);line-height:3rem;padding:0 2rem;background:linear-gradient(to right, var(--mc), var(--sc));border-radius:1rem;}
+
 .portfolio_04 .circle_gooey {position:absolute;top:0;left:0;width:100%;height:100vh;filter:url('#bbq');z-index:-1;}
 .portfolio_04 .circle_gooey:before {content:"";position:absolute;bottom:-5rem;left:-10rem;display:block;width:30rem;height:30rem;background:var(--mc);border-radius:50%;}
 .portfolio_04 .circle_gooey:after {content:"";position:absolute;bottom:10rem;left:10rem;display:block;width:10rem;height:10rem;background:var(--mc);border-radius:50%;animation:circle_move 5s infinite linear;}
@@ -91,7 +113,6 @@ body {color:var(--dc);}
 @keyframes circle_move {
     to {bottom:70%;left:40%;opacity:0}
 }
-
 
 .profile .spec {font-size:1.25rem;}
 .profile .spec i {padding:0.5rem;background:var(--dc);color:var(--lc);margin:0 0.25rem;border-radius:50%;}
