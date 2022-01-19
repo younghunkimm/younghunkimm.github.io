@@ -118,9 +118,16 @@ $('#scroll_banner .itm01').on('click', function(){
 });
 
 $(window).on('scroll', function(){
-    var sct=$(window).scrollTop();
+    var sct = $(window).scrollTop();
+    var banner = $('#scroll_banner')
 
-    $('#scroll_banner').css({bottom:100 - sct})
+    banner.css({bottom:100 - sct})
+
+    if (sct < 1000) {
+        banner.removeClass('on');
+    } else {
+        banner.addClass('on')
+    }
 });
 
 // -----------------------------------
