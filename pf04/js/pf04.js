@@ -78,10 +78,17 @@ $(window).on('scroll', function(){
 $('.room_slider').on('init reInit afterChange', function(e,s,c){
     // console.log(c,s.slideCount);
     var i = (c ? c : 0);
-    $('#sc01 .snum').text("0" + (i+1) + " / " + "0" + s.slideCount);
+    $('#sc01 .snum').text("0" + (i+1));
+});
+
+$('.dining_slider').on('init reInit afterChange', function(e,s,c){
+    // console.log(c,s.slideCount);
+    var i = (c ? c : 0);
+    $('#sc02 .snum').text("0" + (i+1));
 });
 
 var room = $('.room_slider').slick({
+    autoplay:true,
     arrows:false,
     asNavFor:'.r_text_slider',
     draggable:true,
@@ -91,7 +98,7 @@ var room = $('.room_slider').slick({
             settings: {
                 slidesToShow:1,
                 centerMode:true,
-                centerPadding:'1rem',
+                centerPadding:'0',
             }
         }
     ]
@@ -111,23 +118,18 @@ $('#sc01 i.xi-angle-right-thin').on('click', function(){
     $('.room_slider').slick('slickNext');
 });
 
-$('.dining_slider').on('init reInit afterChange', function(e,s,c){
-    // console.log(c,s.slideCount);
-    var i = (c ? c : 0);
-    $('#sc02 .snum').text("0" + (i+1) + " / " + "0" + s.slideCount);
-});
-
 $('.dining_slider').slick({
+    autoplay:true,
     arrows:false,
     asNavFor:'.d_text_slider',
     draggable:true,
     responsive:[
         {
-            breakpoint:769,
+            breakpoint:1000,
             settings: {
                 slidesToShow:1,
                 centerMode:true,
-                centerPadding:'1rem',
+                centerPadding:'0',
             }
         }
     ]
@@ -155,9 +157,16 @@ $('.event_slider').slick({
         {
             breakpoint:769,
             settings: {
+                slidesToShow:2,
+                centerPadding:'0',
+            }
+        },
+        {
+            breakpoint:450,
+            settings: {
                 slidesToShow:1,
                 centerMode:true,
-                centerPadding:'1rem',
+                centerPadding:'0.75rem',
             }
         }
     ]

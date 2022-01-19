@@ -1,9 +1,9 @@
 $(function(){
 // ---------------------------------------
-var HD = $('#header')
-var depth02 = $('.depth02')
+let HD = $('#header')
+let depth02 = $('.depth02')
 HD.on('mouseenter', function(){
-    var sct = $(window).scrollTop();
+    let sct = $(window).scrollTop();
     if (sct == 0) {
         if ($(window).width() >= 768) {
             $('.logo-w').hide();
@@ -15,7 +15,7 @@ HD.on('mouseenter', function(){
     };
 });
 HD.on('mouseleave', function(){
-    var sct = $(window).scrollTop();
+    let sct = $(window).scrollTop();
     if (sct == 0) {
         if ($(window).width() >= 768) {
             $('.logo-w').show();
@@ -28,7 +28,7 @@ HD.on('mouseleave', function(){
 });
 
 const mainSlider = $('.main_slider').slick({
-    autoplay:true,
+    // autoplay:true,
     autoplaySpeed:4000,
     pauseOnHover:false,
     pauseOnFocus:false,
@@ -65,8 +65,8 @@ $('.slider02').slick({
 $('.tab_menu>li').eq(0).addClass('on')
 $('.info03 .content_box>div').eq(0).addClass('on')
 $('.tab_menu>li').on('click', function(){
-    var me = $(this);
-    var idx = me.index();
+    let me = $(this);
+    let idx = me.index();
     $('.info03 .content_box>div').eq(idx).addClass('on').siblings().removeClass('on');
     me.addClass('on').siblings().removeClass('on');
 });
@@ -75,9 +75,12 @@ $('.family_site span').on('click', function(){
     $('.family_site ul').stop().slideToggle();
 });
 
-var QM = $('.quick_menu');
+let qm = $('.quick_menu');
+let qmH = qm.innerHeight();
+let qmT = qm.offset().top;
+let vh = $(window).innerHeight();
 $(window).on('scroll', function(){
-    var sct = $(window).scrollTop();
+    let sct = $(window).scrollTop();
     if (sct > 0) {
         HD.addClass('on');
         $('.logo-w').hide();
@@ -102,11 +105,11 @@ $(window).on('scroll', function(){
     };
 
     if (sct == 0) {
-        QM.removeClass('on');
-    } else if (sct < 1950) {
-        QM.addClass('on');
+        qm.removeClass('on');
+    } else if (sct < qmH + qmT - vh) {
+        qm.addClass('on');
     } else {
-        QM.removeClass('on');
+        qm.removeClass('on');
     }
 });
 
