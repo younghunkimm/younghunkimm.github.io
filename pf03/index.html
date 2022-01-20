@@ -6,14 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pf03 뚜레쥬르</title>
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
-    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/pf03.css?ver=1.511">
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
-    <script src="./js/jquery.mb.YTPlayer.min.js"></script>
     <script src="./js/pf03.js?ver=1.21"></script>
 </head>
 
@@ -84,256 +81,232 @@
 
         <!-- main -->
         <main>
-            <!-- main_visual -->
             <section id="main_visual">
-
-            </section>
-            <div id="main_player">video</div>
-
-            <!-- section01 -->
-            <section id=con01>
-                <h2>건강한 데일리 베이커리</h2>
-                <p>건강하지만, 맛있어야, 맛있지만, 건강해야, 매일 먹을 수 있다는 <strong>'평범한 원칙'</strong>으로부터 뚜레쥬르의 오늘은 시작됩니다.</p>
-                <div class="container">
-                    <div class="pic01">
-                        <div class="pic01_box"></div>
-                    </div>
-                    <div class="des">
-                        <div class="text_box">
-                            <h3>매일매일 (Tous Les Jours),<br>매장에서 직접 굽는 신선한 베이커리</h3>
-                            <p>뚜레쥬르는(Tous Les Jours - 프랑스어로 ‘매일매일’이라는 뜻)"<br> 그 이름의 의미처럼 매일매일 매장에서 직접 굽는 신선함을 가장 큰
-                                가치로<br> 하는 베이커리 입니다. 1997년 구리교문에 처음 매장을 연 뚜레쥬르는,<br> 그 시절 공장에서 양산빵을 납품 받던 다른 베이커리들과
-                                달리,<br> 하루 3번 매장에서 갓 구운 신선한 빵을 제공하며<br> 국내 베이커리 업계에 새로운 변화의 바람을 일으켰습니다.<br> 뚜레쥬르 매장에
-                                들어서는 순간 감도는 갓 구워낸 빵의 고소하고 달큰한 향은<br> 대량 생산에 급급했던 여타의 베이커리 브랜드와는<br> 분명히 다른 차별점이 되었습니다
-                            </p>
-                        </div>
-                    </div>
-                    <div class="pic02">
-                        <img src="./img/sc01_02.jpg" alt="">
-                    </div>
+                <div class="main_slider">
+                    <figure class="itm01"></figure>
+                    <figure class="itm02"></figure>
+                </div>
+                <div class="slogan">
+                    <h2>건강한 데일리 베이커리</h2>
+                    <p>
+                        건강하지만, 맛있어야,<br>
+                        맛있지만, 건강해야,<br>
+                        <strong>매일 먹을 수 있다는 평범한 원칙</strong>으로부터<br>
+                        뚜레쥬르의 오늘은 시작됩니다.
+                    </p>
+                </div>
+                <div class="arrows">
+                    <i class="xi-angle-left-thin main_prev"></i>
+                    <i class="xi-angle-right-thin main_next"></i>
                 </div>
             </section>
-
-            <!-- section02 -->
-            <section id="con02">
-                <h2>뚜레쥬르's 시그니처</h2>
-                <p>뚜레쥬르는 더욱 따뜻하고 <strong>'촉촉한 갓 구운 빵'</strong>을 제공하기 위해 끊임없이 노력합니다.</p>
+            <section id="new_products" class="content">
                 <div class="container">
-                    <div class="con">
-                        <div class="category">
-                            <ul>
-                                <li><a href="#!">BREAD</a></li>
-                                <li><a href="#!">CAKE</a></li>
-                                <li><a href="#!">DELI</a></li>
-                                <li><a href="#!">GIFT</a></li>
-                                <li><a href="#!">DESSERT</a></li>
-                                <li><a href="#!">DRINK</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pr_con con">
-                        <div class="pr_slider">
-                            <figure>
-                                <img src="./img/bread01.png" alt="">
-                                <h3>순, 식빵(대)</h3>
-                            </figure>
-                            <figure>
-                                <img src="./img/cake06.png" alt="">
-                                <h3>뮬란 피치블라썸 생크림</h3>
-                            </figure>
-                            <figure>
-                                <img src="./img/deli01.png" alt="">
-                                <h3>치킨타코나쵸샐러드</h3>
-                            </figure>
-                            <figure>
-                                <img src="./img/gift01.png" alt="">
-                                <h3>딸기크림잼 롤케이크</h3>
-                            </figure>
-                            <figure>
-                                <img src="./img/dessert01.png" alt="">
-                                <h3>초코칩스콘</h3>
-                            </figure>
-                            <figure>
-                                <img src="./img/drink01.png" alt="">
-                                <h3>사랑해요! 밀키스쉐이크</h3>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="pr_con con">
-                        <div class="txt_slider">
-                            <div class="pr_des">
-                                <h3>BREAD</h3>
-                                <p>막걸리종으로 만든 쌀 발효당을 넣은<br> 은은한 단맛과, 탕종법으로 부드럽고 촉촉한<br> 식감의 뚜레쥬르 시그니처 식빵<br> 우리가족 식사 대용은
-                                    물론 고급스러운 패키지로<br> 작은 마음을 표현하기에 손색없는 제품</p>
-                            </div>
-                            <div class="pr_des">
-                                <h3>CAKE</h3>
-                                <p>아삭아삭 원물이 씹히는 복숭아 생크림에<br> 벚꽃 향이 더해져 입안 가득 향긋한<br> 피치 블라썸 생크림</p>
-                            </div>
-                            <div class="pr_des">
-                                <h3>DELI</h3>
-                                <p>매콤한 치킨, 과카몰리, 토마토, 곡물이 어울린<br> 샐러드를 바삭한 나쵸와 함께 즐기는 타코샐러드</p>
-                            </div>
-                            <div class="pr_des">
-                                <h3>GIFT</h3>
-                                <p>촉촉한 딸기시트에 딸기 크림과<br> 달콤한산딸기잼이 들어가 상큼한 딸기의 맛을<br> 그대로 담은 롤케이크</p>
-                            </div>
-                            <div class="pr_des">
-                                <h3>DESSERT</h3>
-                                <p>버터풍미 가득한 고소한 스콘에 달콤하고<br> 진한 초코칩을 가득 넣은 제품</p>
-                            </div>
-                            <div class="tpr_des">
-                                <h3>DRINK</h3>
-                                <p>쉐이크 맛집! 뚜레쥬르의 21년 야심작!<br> 부드러운 우유쉐이크에 청량감 있는<br> 밀키스의 풍미를 더한 콜라보 쉐이크 제품</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu_btn">
-                        <a href="#!">전체메뉴</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- section03 -->
-            <section id="con03">
-                <h2>브랜드 스토리</h2>
-                <p>좋은 밀가루를 만드는 회사의 <strong>'베이커리 브랜드'</strong></p>
-                <div class="container">
-                    <div class="case01">
-                        <figure>
-                            <div class="main_case"></div>
-                        </figure>
-                        <div class="youtube_des">
-                            <h3>재료캠페인 뚜레쥬르 순브레드</h3>
-                            <p>
-                                뚜레쥬르는 다릅니다.<br> 밀가루 한줌부터 소금 한톨까지<br> 쉽게 허락하지 않는 고집, 자연의 기운을 담은<br> 순수한 재료, 건강한 빵을 위한 정성의
-                                시간<br> 이 모든것이 지켜져야 뚜레쥬르의 빵이 됩니다.<br> 재료부터 다른 건강한 베이커리 뚜레쥬르
-                            </p>
+                    <h2>
+                        신제품
+                        <a href="#!">
+                            <strong>VIEW MORE <i class="xi-plus-thin"></i></strong>
+                        </a>
+                    </h2>
+                    <div class="new_slider">
+                        <div class="new_wrapper">
                             <a href="#!">
-                                <span>view more</span>
-                                <i class="xi-long-arrow-right"></i>
+                                <div>
+                                    <figure>
+                                        <img src="./img/new_bread01.png" alt="후라잉 치즈감자볼">
+                                    </figure>
+                                    <figcaption>
+                                        <h3>후라잉 치즈감자볼</h3>
+                                        <p>
+                                            감자채를 듬뿍 묻혀 겉은 바삭 속은 쫄깃한 도넛 속<br>감자크림치즈 풍미 가득한 제품
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/new_bread02.png" alt="고소한 흑임자크림빵">
+                                    </figure>
+                                    <figcaption>
+                                        <h3>고소한 흑임자크림빵</h3>
+                                        <p>
+                                            은은한 흑임자 풍미와 부드러운 크림을 가득 넣어<br>차게 먹으면 더욱 맛있는 제품
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/new_bread03.png" alt="후라잉 소시지 포테이토">
+                                    </figure>
+                                    <figcaption>
+                                        <h3>후라잉 소시지 포테이토</h3>
+                                        <p>바삭한 감자채를 듬뿍 토핑한 빵 속 짭조롬한 소시지가<br>통으로 들어간 단짠 매력 제품</p>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/new_bread04.png" alt="연유콩떡빵">
+                                    </figure>
+                                    <figcaption>
+                                        <h3>연유콩떡빵</h3>
+                                        <p>달콤한 콩배기가 콕콕 박힌 부드러운 빵 속 쫄깃한<br>연유팥떡이 통째로 들어간 제품</p>
+                                    </figcaption>
+                                </div>
                             </a>
                         </div>
                     </div>
-                    <div class="mv01"></div>
-                    <div class="case02">
-                        <figure>
-                            <img src="./img/sc03_01.jpg" alt="">
-                            <h3>빵의 기본이 되는 밀가루는<br> <strong>베이커리 전용 밀가루</strong></h3>
-                            <p>뚜레쥬르에서는 빵의 개성있는 식감을 잘 살려주는<br> 베이커리전용 밀가루를 사용한 제품도<br> 만나보실 수 있습니다.</p>
-                        </figure>
-                        <figure>
-                            <img src="./img/sc03_02.jpg" alt="">
-                            <h3>소량의 소금까지도<br> <strong>신안 천일염</strong></h3>
-                            <p>빵에 아주 조금 들어가지만 없어서는 안되는<br> 중요한 재료 소금은 대한민국 명품갯벌이 만들어낸<br> 천일염 CJ제일제당 '오천년의 신비'를 사용합니다.
-                            </p>
-                        </figure>
-                        <figure>
-                            <img src="./img/sc03_03.jpg" alt="">
-                            <h3>맛을 더하는 재료도 순수한 자연재료.<br> <strong>순시리즈</strong></h3>
-                            <p>뚜레쥬르 순시리즈는 빵의 맛을 더 풍부하게 하는<br> 우유, 치즈, 채소, 과일등도 자연의 순수함을<br> 그대로 간직한 재료들을 선별하여 사용합니다.</p>
-                        </figure>
+                    <div class="arrows">
+                        <i class="xi-angle-left-thin new_prev"></i>
+                        <i class="xi-angle-right-thin new_next"></i>
                     </div>
                 </div>
             </section>
 
-            <!-- section04 -->
-            <section id=con04>
-                <h2>Instagram</h2>
-                <p>#뚜레쥬르 #할인꿀팁 #딜리버리 #Event #공지사항</p>
-                <div class="insta_slider">
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta01.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta02.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta03.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta04.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta05.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta06.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta07.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta08.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta09.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta10.jpg" alt="">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="#!" class="case">
-                            <img src="./img/insta11.jpg" alt="">
-                        </a>
-                    </figure>
-                </div>
-                <a href="#!" class="more">view more</a>
-            </section>
-
-            <!-- section05 -->
-            <section id=con05>
+            <section id="best_products" class="content">
                 <div class="container">
-                    <div class="case">
-                        <div class="search">
-                            <div class="des">
-                                <h3>
-                                    뚜레쥬르를 가까이에서 경험해보세요.<br> 고객님과 가장 가까이 있는 매장을 찾아보세요!
-                                </h3>
-                            </div>
-                            <form action="">
-                                <input type="text" , placeholder="시/군/구">
-                                <a href="#!"><i class="xi-search"></i></a>
-                            </form>
+                    <h2>
+                        BEST
+                        <a href="#!">
+                            <strong>VIEW MORE <i class="xi-plus-thin"></i></strong>
+                        </a>
+                    </h2>
+                    <div class="best_grid">
+                        <div class="best_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/best01.png" alt="">
+                                    </figure>
+                                    <figcaption>
+                                        <h3 data-type="bread">순, 식빵(대)</h3>
+                                        <p>
+                                            막걸리종으로 만든 쌀 발효당을 넣은 은은한 단맛과, 탕종법으로 부드럽고 촉촉한 식감의 뚜레쥬르 시그니처 식빵
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="best_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/best02.jpg" alt="">
+                                    </figure>
+                                    <figcaption>
+                                        <h3 data-type="cake">쿠키런 초코 골드레이어</h3>
+                                        <p>
+                                            진정한 초코 맛 ! 부드러운 초코와 화이트 시트 속
+                                            두 가지 맛 초코 크림이 더해진 쿠키런 대표 케이크
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="best_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/best03.jpg" alt="">
+                                    </figure>
+                                    <figcaption>
+                                        <h3 data-type="deli">레드타코치킨 샌드위치</h3>
+                                        <p>
+                                            매콤한 치폴레소스 치킨과 아삭한 야채, 부드러운 치즈가 어우러진 콜드 샌드위치
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="best_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/best04.jpg" alt="">
+                                    </figure>
+                                    <figcaption>
+                                        <h3 data-type="dessert">프렌치 쿠키세트(대)</h3>
+                                        <p>
+                                            버터, 초코, 호두샤브레, 코코넛&아몬드비스킷, 버터쿠키 풍부한 버터향, 부드러운 식감의 6가지 쿠키 세트
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="best_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/best05.png" alt="">
+                                    </figure>
+                                    <figcaption>
+                                        <h3 data-type="gift">리얼브라우니</h3>
+                                        <p>
+                                            다크초콜릿과 밀크초콜릿의 달콤한 맛을 느낄 수 있는 쫀득한 식감의 브라우니
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="best_wrapper">
+                            <a href="#!">
+                                <div>
+                                    <figure>
+                                        <img src="./img/best06.jpg" alt="">
+                                    </figure>
+                                    <figcaption>
+                                        <h3 data-type="drink">딸기라떼</h3>
+                                        <p>
+                                            톡톡 씹히는 달콤한 딸기 다이스와 고소한 우유의 조화가 돋보이는 과일라떼
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="case">
-                        <a href="#!" class="itm01">
-                            <div class="text_case">
-                                <h3>제휴 할인 혜택</h3>
-                                <p>다양한 제휴 할인 혜택을<br>뚜레쥬르에서 만나보세요.</p>
-                            </div>
-                        </a>
-                        <a href="#!" class="itm02">
-                            <div class="text_case">
-                                <h3>쇼핑몰 & 케이크배달</h3>
-                                <p>뚜레쥬르 제품을 온라인에서<br>구매 & 배송신청 하세요.</p>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </section>
-
+            <section id="service">
+                <div class="service_grid">
+                    <figure>
+                        <video src="./img/video1.mp4" autoplay muted loop playsinline></video>
+                    </figure>
+                    <figure>
+                        <div class="txt">
+                            <h2>창업안내</h2>
+                            <p>뚜레쥬르 창업<br>이렇게 시작해보세요.</p>
+                            <a href="#!">자세히보기</a>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="txt">
+                            <h2>기사 채용안내</h2>
+                            <p>제과제빵의 꿈을<br>뚜레쥬르와 함께 하세요.</p>
+                            <a href="#!">자세히보기</a>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="txt">
+                            <h2>매장찾기</h2>
+                            <p>가까운 뚜레쥬르 매장을 찾아보세요.</p>
+                            <form id="search" action="">
+                                <input type="search" placeholder="도로명주소 & 시/군/구 입력">
+                                <button type="submit"><i class="xi-search"></i></button>
+                            </form>
+                        </div>
+                    </figure>
+                </div>
+            </section>
         </main>
 
         <!-- footer -->
@@ -405,43 +378,6 @@
         <span></span>
         <span></span>
         <span></span>
-    </div>
-
-    <!-- popup -->
-    <div id="popup">
-        <div class="con">
-            <h2>마스크 착용 의무화 안내</h2>
-            <p>11월 13일부터 다중이용시설에서<br>마스크 미착용 시 과태료가 부과됩니다.<br>매장 내에서 음료 및 음식을 섭취할 때를<br> 제외하고는 꼭 <strong>마스크</strong>를
-                착용해 주세요.</p>
-            <b>뚜레쥬르는 코로나19 확산 방지를 위한<br>예방 및 의무 이행에 최선을 다하고 있습니다.</b>
-            <div class="close_con">
-                <span class="r_close">닫기<i class="xi-close-thin"></i></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- scroll_banner -->
-    <div id="scroll_banner">
-        <div class="itm itm01">
-            <i class="xi-angle-up-thin"></i>
-            <span>TOP</span>
-        </div>
-        <a href="#!" class="itm itm02">
-            <i class="xi-maker"></i>
-            <span>매장찾기</span>
-        </a>
-        <a href="#!" class="itm itm03">
-            <i class="xi-cake"></i>
-            <span>MENU</span>
-        </a>
-        <a href="#!" class="itm itm04">
-            <i class="xi-gift-o"></i>
-            <span>EVENT</span>
-        </a>
-        <a href="#!" class="itm itm05">
-            <i class="xi-shop"></i>
-            <span>창업안내</span>
-        </a>
     </div>
 </body>
 
