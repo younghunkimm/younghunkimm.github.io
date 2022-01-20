@@ -358,11 +358,11 @@ body.noScroll {overflow:hidden;}
     
     #sc01 .container {position:relative;}
 
-    #sc01 .room_con {position:relative;width:100%;margin-bottom:0.5rem;box-shadow:none;z-index:2;}
+    #sc01 .room_con {position:relative;width:100%;margin-bottom:0.75rem;box-shadow:none;z-index:2;}
     #sc01 .room_con figure img {width:100%;}
     
     #sc01 .text_con {position:static;top:50%;left:calc(50% - 0.75rem);transform:translateY(0);width:100%;padding:0 0.75rem;}
-    #sc01 .r_text_con {text-align:left;border:1px solid #777;width:100%;padding:1.5rem 1.5rem;}
+    #sc01 .r_text_con {text-align:left;border:1px solid #bbb;width:100%;padding:1.5rem 1.5rem;}
     #sc01 .r_text_con .room_text h3 {font-size:1rem;font-weight:500;color:#444;margin-bottom:0.5rem;line-height:1.5rem;}
     #sc01 .r_text_con .room_text p {font-size:0.8rem;font-weight:300;color:#666;margin-bottom:1.5rem;line-height:1.4;}
 
@@ -382,7 +382,7 @@ body.noScroll {overflow:hidden;}
     #sc02 {padding-bottom:7.5rem;text-align:center;}
     #sc02 .container {position:relative;}
     
-    #sc02 .dining_con {position:relative;width:100%;margin-left:auto;margin-bottom:0.5rem;box-shadow:none;z-index:2;}
+    #sc02 .dining_con {position:relative;width:100%;margin-left:auto;margin-bottom:0.75rem;box-shadow:none;z-index:2;}
     #sc02 .dining_con figure img {width:100%;}
     
     #sc02 .text_con {position:static;top:50%;right:calc(50% - 0.75rem);transform:translateY(0);z-index:1;width:100%;padding:0 0.75rem;}

@@ -13,14 +13,30 @@ $(function(){
             sc.eq(idx).addClass('on').siblings().removeClass('on');
             sideBar.eq(idx).addClass('on').siblings().removeClass('on');
             idx == 0 ? $('.toTop').fadeOut() : $('.toTop').fadeIn();
-            if (idx == 1 || idx == 3 || idx == 5) {
-                right.addClass('active');
-                left.removeClass('active');
-            } else if (idx == 0 || idx == 7 || idx == 6) {
-                all.removeClass('active');
-            } else {
-                left.addClass('active');
-                right.removeClass('active');
+            if ($(window).width() > 768) {
+                if (idx == 1 || idx == 3 || idx == 5) {
+                    right.addClass('active');
+                    left.removeClass('active');
+                } else if (idx == 0 || idx == 7 || idx == 6) {
+                    all.removeClass('active');
+                } else {
+                    left.addClass('active');
+                    right.removeClass('active');
+                }
+            };
+            if ($(window).width() <= 768) {
+                if (idx == 7) {
+                    $('.toTop').addClass('active');
+                    $('#header h1').fadeOut();
+                } else {
+                    $('.toTop').removeClass('active');
+                    $('#header h1').fadeIn();
+                };
+                if (idx == 0 || idx == 6 || idx == 7) {
+                    $('nav').addClass('active');
+                } else {
+                    $('nav').removeClass('active');
+                };
             }
         },
     });
@@ -28,6 +44,7 @@ $(function(){
     $('.cover_btn').on('click', function(){
         $(this).toggleClass('on');
         $('#cover').fadeToggle();
+        $('#footer address').fadeToggle();
     });
     
     let cloneMenu = $('nav>ul').clone();
@@ -37,6 +54,9 @@ $(function(){
         $('#cover').fadeOut();
         $('.cover_btn').removeClass('on');
         $('#footer').removeClass('on');
+        if (!$('.cover_btn').hasClass('on')) {
+            $('#footer address').fadeOut();
+        };
     });
     
     $('#cover').on('scroll wheel touchmove', function(){
@@ -60,4 +80,4 @@ $(function(){
     
     
     // --------------------------------------------
-    });
+});
