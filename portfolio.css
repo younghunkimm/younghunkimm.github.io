@@ -593,7 +593,7 @@ body {color:var(--dc);}
     .portfolio_06 .case:hover h3 {color:var(--lc);}
     .portfolio_06 .case h3 small {font-size:2.5vw;color:#777;}
 
-    .portfolio_06 .arrows_case {display:flex;justify-content:space-evenly;width:100%;font-size:5vw;font-weight:100;color:var(--gc);line-height:1.4;margin-top:1em;}
+    .portfolio_06 .arrows_case {display:flex;justify-content:space-evenly;width:100%;font-size:5vw;font-weight:100;color:var(--gc);line-height:1.4;margin-top:1em;user-select:none;}
 
     .portfolio_06 .arrows_case .pp_btn:before {content:"\ea3c";font-family: xeicon!important;color:#bbb;font-size:7vw;line-height:1;}
     .portfolio_06 .arrows_case .pp_btn.on:before {content:"\ea3f";}
