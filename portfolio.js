@@ -25,7 +25,7 @@ $(function(){
                 }
             };
             if ($(window).width() <= 768) {
-                if (idx == 7) {
+                if (idx == 6 || idx == 7) {
                     $('.toTop').addClass('active');
                     $('#header h1').fadeOut();
                 } else {

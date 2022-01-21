@@ -582,7 +582,7 @@ body {color:var(--dc);}
         -webkit-background-clip:text;
     }
     .portfolio_06 .case {position:relative;margin-bottom:1rem;}
-    .portfolio_06 .case:after {content:attr(data-num);position:absolute;top:0;right:1rem;font-size:5vw;font-weight:900;width:1.5em;line-height:1.5em;pointer-events:none;background:rgba(0,0,0,0.5);border-radius:0 0.5rem 0 0.5rem;
+    .portfolio_06 .case:after {content:attr(data-num);position:absolute;top:-1px;right:calc(1rem - 1px);font-size:5vw;font-weight:900;width:1.7em;line-height:1.7em;pointer-events:none;background:#191919;border-radius:0 0.5rem 0 0.5rem;
         -webkit-text-stroke:1px var(--gc);
         -webkit-text-fill-color:transparent;
     }
@@ -595,7 +595,7 @@ body {color:var(--dc);}
 
     .portfolio_06 .arrows_case {display:flex;justify-content:space-evenly;width:100%;font-size:5vw;font-weight:100;color:var(--gc);line-height:1.4;margin-top:1em;}
 
-    .portfolio_06 .arrows_case .pp_btn:before {content:"\ea3c";font-family: xeicon!important;color:#bbb;}
+    .portfolio_06 .arrows_case .pp_btn:before {content:"\ea3c";font-family: xeicon!important;color:#bbb;font-size:7vw;line-height:1;}
     .portfolio_06 .arrows_case .pp_btn.on:before {content:"\ea3f";}
 
     .portfolio_06 .arrows_case .arrow {position:relative;border-bottom:1px solid var(--dc);letter-spacing:0.1em;}
