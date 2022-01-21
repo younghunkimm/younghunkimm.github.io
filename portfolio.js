@@ -25,13 +25,16 @@ $(function(){
                 }
             };
             if ($(window).width() <= 768) {
-                if (idx == 6 || idx == 7) {
+                if (idx >= 6) {
                     $('.toTop').addClass('active');
-                    $('#header h1').stop().fadeOut();
                 } else {
                     $('.toTop').removeClass('active');
-                    $('#header h1').stop().fadeIn();
                 };
+                if (idx == 7) {
+                    $('#header h1').stop().fadeOut();
+                } else {
+                    $('#header h1').stop().fadeIn();
+                }
                 if (idx == 0 || idx == 6 || idx == 7) {
                     $('nav').addClass('active');
                 } else {
