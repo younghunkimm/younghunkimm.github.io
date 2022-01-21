@@ -362,7 +362,7 @@ body {color:var(--dc);}
     .container .mockup {flex:2 100%;}
     .container .description {flex:1 100%;}
     
-    #header h1 {position:fixed;top:1rem;left:1rem;color:var(--gc);transition:0.4s;z-index:99;}
+    #header h1 {position:fixed;top:1rem;left:1rem;color:var(--lc);transition:0.4s;z-index:99;}
     #header h1.active {color:var(--dc);}
     #header h1 li~li {margin-top:0.2rem;}
 
