@@ -258,8 +258,8 @@ strong:after {content:"";position:absolute;bottom:0;left:0;display:block;backgro
     /* new_products */
     #new_products {position:relative;background:url(../img/sc_bg.jpg) no-repeat center center/cover;color:var(--lc);overflow-x:hidden;}
     #new_products h2 {position:relative;font-size:1.5rem;font-weight:500;color:var(--lc);text-align:center;font-family: 'Noto Serif KR', serif;margin-bottom:2.5rem;}
-    #new_products h2>a {position:absolute;top:0;right:0;display:block;font-size:0.7rem;line-height:1.5rem;letter-spacing:0.05em;}
-    #new_products h2>a strong:after {width:0;transition:0.5s;}
+    #new_products h2>a {position:absolute;top:0;right:0;display:block;font-size:0.65rem;line-height:1.5rem;letter-spacing:0.05em;}
+    #new_products h2>a strong:after {width:100%;transition:0.5s;}
     #new_products h2>a:hover strong:after {width:100%;}
 
     #new_products .new_wrapper {border:0.5rem solid transparent;border-radius:2rem;}
@@ -291,8 +291,8 @@ strong:after {content:"";position:absolute;bottom:0;left:0;display:block;backgro
     /* best_products */
     #best_products {position:relative;color:var(--dc);background:#fff url(../img/bread_bg.png) repeat-y fixed center center;}
     #best_products h2 {position:relative;font-size:1.5rem;font-weight:500;color:var(--dc);text-align:center;font-family: 'Noto Serif KR', serif;margin-bottom:2.5rem;}
-    #best_products h2>a {position:absolute;top:0;right:0;display:block;font-size:0.7rem;line-height:1.5rem;letter-spacing:0.05em;}
-    #best_products h2>a strong:after {width:0;transition:0.5s;}
+    #best_products h2>a {position:absolute;top:0;right:0;display:block;font-size:0.65rem;line-height:1.5rem;letter-spacing:0.05em;}
+    #best_products h2>a strong:after {width:100%;transition:0.5s;}
     #best_products h2>a:hover strong:after {width:100%;}
 
     #best_products .best_grid {display:grid;grid-template-columns:repeat(2, 1fr);gap:1.5rem;}
