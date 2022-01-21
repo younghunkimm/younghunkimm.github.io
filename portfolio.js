@@ -12,7 +12,7 @@ $(function(){
             let right = $('.cover_btn, nav, .toTop')
             sc.eq(idx).addClass('on').siblings().removeClass('on');
             sideBar.eq(idx).addClass('on').siblings().removeClass('on');
-            idx == 0 ? $('.toTop').fadeOut() : $('.toTop').fadeIn();
+            idx == 0 ? $('.toTop').stop().fadeOut() : $('.toTop').stop().fadeIn();
             if ($(window).width() > 768) {
                 if (idx == 1 || idx == 3 || idx == 5) {
                     right.addClass('active');
@@ -27,10 +27,10 @@ $(function(){
             if ($(window).width() <= 768) {
                 if (idx == 6 || idx == 7) {
                     $('.toTop').addClass('active');
-                    $('#header h1').fadeOut();
+                    $('#header h1').stop().fadeOut();
                 } else {
                     $('.toTop').removeClass('active');
-                    $('#header h1').fadeIn();
+                    $('#header h1').stop().fadeIn();
                 };
                 if (idx == 0 || idx == 6 || idx == 7) {
                     $('nav').addClass('active');
@@ -43,15 +43,15 @@ $(function(){
     
     $('.cover_btn').on('click', function(){
         $(this).toggleClass('on');
-        $('#cover').fadeToggle();
-        $('#footer address').fadeToggle();
+        $('#cover').stop().fadeToggle();
+        $('#footer address').stop().fadeToggle();
     });
     
     let cloneMenu = $('nav>ul').clone();
     $('#cover').append(cloneMenu);
     
     $('#cover a').on('click', function(){
-        $('#cover').fadeOut();
+        $('#cover').stop().fadeOut();
         $('.cover_btn').removeClass('on');
         $('#footer').removeClass('on');
         if (!$('.cover_btn').hasClass('on')) {
@@ -113,6 +113,11 @@ $(function(){
     
     $('.pp_btn').on('click', function(){
         $(this).toggleClass('on');
+        if ($('.pp_btn').hasClass('on')) {
+            trnS.slick('slickPause');
+        } else {
+            trnS.slick('slickPlay');
+        }
         
     })
     // --------------------------------------------
