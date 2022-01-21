@@ -614,7 +614,7 @@ body {color:var(--dc);}
     .profile .spec>* {margin-bottom:0.7rem;}
     .profile .spec>*:last-child {margin-bottom:0;}
     .profile .spec h2 {font-size:0.9rem;font-weight:700;margin-bottom:0.7rem;color:var(--lc);}
-    .profile .spec dl {margin-bottom:1rem;}
+    .profile .spec dl {margin-bottom:0.6rem;}
     .profile .spec dt {font-size:0.75rem;font-weight:400;margin-bottom:0.5rem;color:var(--lc)}
     .profile .spec dt:before {content:"";display:inline-block;width:0.1rem;height:0.1rem;background:var(--lc);vertical-align:middle;border-radius:50%;margin-right:0.5rem;}
     .profile .spec small {margin-left:1.5rem;font-size:0.6rem;font-weight:300;color:#aaa;}
