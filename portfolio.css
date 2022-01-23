@@ -144,33 +144,6 @@ body {color:var(--dc);}
 .section:nth-child(even) .link {right:0;}
 
 
-/* section effect */
-.section .circle {position:absolute;display:block;width:10rem;height:10rem;border-left:3px solid transparent;border-bottom:3px solid transparent;border-radius:50%;z-index:1;}
-.section .circle:before {content:"";position:absolute;top:1.2rem;left:1.2rem;display:block;width:0.3rem;height:0.3rem;border-radius:50%;}
-.section:nth-child(2) .circle, .section:nth-child(4) .circle, .section:nth-child(6) .circle {top:4%;left:1%;transform:translate(-50%, -50%) rotateX(-60deg) rotateY(40deg) rotate(360deg);animation:spin 2s linear infinite;}
-.section:nth-child(3) .circle, .section:nth-child(5) .circle {top:4%;right:1%;transform:translate(50%, -50%) rotateX(-60deg) rotateY(-40deg) rotate(360deg);animation:spin2 2s linear infinite;}
-
-@keyframes spin {
-    100% {transform:translate(-50%, -50%) rotateX(-60deg) rotateY(40deg) rotate(0deg);}
-}
-@keyframes spin2 {
-    100% {transform:translate(50%, -50%) rotateX(-60deg) rotateY(-40deg) rotate(0deg);}
-}
-
-.section .circle2 {position:absolute;bottom:-50%;left:-15%;transform:rotateX(60deg) rotateY(15deg) rotate(0deg);width:130vh;height:130vh;border:1px solid var(--dc);border-radius:50%;animation:spin3 3s linear infinite;}
-.section .circle2:before {content:"";position:absolute;top:0;left:0;display:block;width:100%;height:100%;border:2px solid transparent;border-top:2px solid var(--gc);border-left:none;border-radius:50%;z-index:1;}
-
-.section .circle3 {position:absolute;top:-80%;right:-15%;transform:rotateX(70deg) rotateY(-15deg) rotate(360deg);width:150vh;height:150vh;border:1px solid var(--dc);border-radius:50%;animation:spin4 4s linear infinite;}
-.section .circle3:before {content:"";position:absolute;top:0;left:0;display:block;width:100%;height:100%;border:2px solid transparent;border-bottom:2px solid var(--gc);border-left:none;border-radius:50%;z-index:1;}
-
-@keyframes spin3 {
-    100% {transform:rotateX(60deg) rotateY(15deg) rotate(360deg);}
-}
-@keyframes spin4 {
-    100% {transform:rotateX(70deg) rotateY(-15deg) rotate(0deg);}
-}
-
-
 /* section description */
 .section .description {position:relative;z-index:99;}
 .section .description h3 {font-size:2rem;font-weight:500;margin-bottom:1rem;}
