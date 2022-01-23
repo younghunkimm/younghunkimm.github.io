@@ -1,6 +1,6 @@
 $(function(){
     // --------------------------------------------
-    
+    // 풀페이지
     let sc = $('.section');
     let sideBar = $('nav li')
     $('#main').fullpage({
@@ -65,7 +65,7 @@ $(function(){
     $('#cover').on('scroll wheel touchmove', function(){
         return false;
     });
-    
+
     function star(){
         let amount = 10;
         let intro = $('.intro .fp-tableCell')
@@ -81,7 +81,7 @@ $(function(){
     var trnS = $('.trn_slider');
     var slickOptions = {
         arrows: false,
-        autoplay: true,
+        autoplay: false,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
