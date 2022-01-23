@@ -497,7 +497,7 @@ body {color:var(--dc);}
         background-image:none;
         background-size:calc(100% - 5rem) auto;
         background-repeat:no-repeat;
-        -webkit-box-reflect:below 0px linear-gradient(transparent, transparent);
+        -webkit-box-reflect:initial;
         box-shadow:0 0 1rem rgba(0,0,0,0.2);
     }
     .section:nth-child(even) .mockup {background-position:right center;}
