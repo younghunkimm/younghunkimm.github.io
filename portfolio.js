@@ -1,6 +1,5 @@
 $(function(){
-    // --------------------------------------------
-    // 풀페이지
+// --------------------------------------------
     let sc = $('.section');
     let sideBar = $('nav li')
     $('#main').fullpage({
@@ -103,14 +102,5 @@ $(function(){
     $('.next_arrow').on('click', function(){
         trnS.slick('slickNext');
     });
-    
-    $('.pp_btn').on('click', function(){
-        $(this).toggleClass('on');
-        if ($('.pp_btn').hasClass('on')) {
-            trnS.slick('slickPause');
-        } else {
-            trnS.slick('slickPlay');
-        }
-    });
-    // --------------------------------------------
+// --------------------------------------------
 });
