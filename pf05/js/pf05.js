@@ -39,7 +39,6 @@ var pr01= $('.product_slider01').slick({
 
 $('.left_con .dots_box ul li').eq(0).addClass('on')
 pr01.on('afterChange', function(e,s,c){
-    console.log(c);
     $('.left_con .dots_box ul li').eq(c).addClass('on').siblings().removeClass('on');
 });
 
