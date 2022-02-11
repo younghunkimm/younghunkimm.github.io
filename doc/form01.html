@@ -26,7 +26,7 @@
         legend : 큰 제목
         name : 정보를 전송해야 할 때 쓰는 속성
         minlength : 최소글자수
-        maxlength : 최대글자수
+        maxlength : 최대글자수 (넘으면 안써짐)
         pattern : 사용가능한 문자범위나 특수문자
         title : 마우스 hover 했을 때 설명
         required : summit 할 때 조건이 안되면 안넘어가게하는 장치 (필수)
@@ -49,11 +49,11 @@
             <legend>로그인</legend>
             <p>
                 * 아이디 : 
-                <input type="text" name="id" id="id" placeholder="enter your id" pattern="[a-z^A-Z^가-힣^0-9^_^*]{4,10}" title="4자부터 10자까지 입력 영문 대소문자,한글,숫자,_,*만 입력 가능" required>
+                <input type="text" name="id" id="id" placeholder="enter your id" maxlength="10" pattern="[a-z^A-Z^가-힣^0-9^_^*]{4,10}" title="4자부터 10자까지 입력 영문 대소문자,한글,숫자,_,*만 입력 가능" required>
             </p>
             <p>
                 * 비밀번호 : 
-                <input type="password" name="pw" id="pw" placeholder="enter your password" pattern="[a-z^A-Z^0-9^_^*^!^@]{8,12}" title="4자부터 10자까지 입력 영문 대소문자,한글,숫자,_,*만 입력 가능" required>
+                <input type="password" name="pw" id="pw" placeholder="enter your password" maxlength="12" pattern="[a-z^A-Z^0-9^_^*^!^@]{8,12}" title="4자부터 10자까지 입력 영문 대소문자,한글,숫자,_,*만 입력 가능" required>
             </p>
             <p>
                 <input type="checkbox" name="id_save" id="id_save" checked>
