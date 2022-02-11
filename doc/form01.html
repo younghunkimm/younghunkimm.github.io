@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Training</title>
+
+
+    <style>
+        *::placeholder {color:#aaa;}
+        #bf {height:30px;}
+    </style>
+</head>
+<body>
+
+    <!--
+        ===== text / password =====
+
+        type : text / password / image
+        action : 회원가입성공화면 < 이동경로
+        method : 전송방식 2가지
+            1) post : 중요한것 (아이디, 비밀번호, 개인정보 등 중요한 것)
+            2) get : 검색할때 (중요한 것 제외)
+        fieldset : 폼에서 container 느낌
+        legend : 큰 제목
+        name : 정보를 전송해야 할 때 쓰는 속성
+        minlength : 최소글자수
+        maxlength : 최대글자수
+        pattern : 사용가능한 문자범위나 특수문자
+        title : 마우스 hover 했을 때 설명
+        required : summit 할 때 조건이 안되면 안넘어가게하는 장치 (필수)
+
+        image : summit 역할을 하는 이미지 버튼
+    -->
+
+    <!-- 
+        ===== checkbox =====
+
+        checked : 처음에 체크 되어있음
+     -->
+
+    <form action="#!" method="post">
+        <fieldset>
+            <legend>로그인</legend>
+            <p>
+                * 아이디 : 
+                <input type="text" name="id" id="id" placeholder="enter your id" pattern="[a-z^A-Z^가-힣^0-9^_^*]{4,10}" title="4자부터 10자까지 입력 영문 대소문자,한글,숫자,_,*만 입력 가능" required>
+            </p>
+            <p>
+                * 비밀번호 : 
+                <input type="password" name="pw" id="pw" placeholder="enter your password" pattern="[a-z^A-Z^0-9^_^*^!^@]{8,12}" title="4자부터 10자까지 입력 영문 대소문자,한글,숫자,_,*만 입력 가능" required>
+            </p>
+            <p>
+                <input type="checkbox" name="id_save" id="id_save" checked>
+                <label for="id_save">아이디 저장</label>
+            </p>
+            <p>
+                검색 :
+                <input type="search" id="search" name="q">
+            </p>
+            <p>
+                이메일 :
+                <input type="email" id="email" name="email" placeholder="example@example.com">
+            </p>
+            <p>
+                전화번호 :
+                <input type="tel" id="tel" name="tel" pattern="[0-9]">
+            </p>
+            <p>
+                색상선택 :
+                <input type="color">
+            </p>
+            <p>
+                주문수량 :
+                <input type="number" min="3" max="6">
+            </p>
+            <p>
+                만족도 :
+                <input type="range" min="1" max="3" value="1">
+            </p>
+            <p>
+                <label for="m">남</label>
+                <input type="radio" name="sex" value="m" id="m" checked>
+                <label for="f">여</label>
+                <input type="radio" name="sex" value="f" id="f">
+            </p>
+            <p>
+                <input type="file" name="file" id="file">
+            </p>
+            <p>
+                <input type="image" src="../lib/base/bts.png" alt="butterfly" id="bf">
+            </p>
+            <select name="food" id="food" size="1"> <!-- multiple(슬라이드) -->
+                <option>피자</option>
+                <option>치킨</option>
+                <option>떡볶이</option>
+                <option>순대</option>
+                <option>튀김</option>
+            </select>
+            <p>
+                탈퇴사유 :<br>
+                <textarea rows="5" cols="100" style="resize:none"></textarea>
+            </p>
+            <p>
+                <button type="submit" id="login_btn">로그인</button>
+                <input type="reset" value="reset">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
