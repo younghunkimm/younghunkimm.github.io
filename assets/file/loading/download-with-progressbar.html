@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download File with Spinner</title>
+    <title>Download File with Progressbar</title>
 
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="./download-with-progressbar.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
             <div class="card">
-                <!-- <canvas id="canvas"></canvas> -->
-                <button type="button">다운로드</button>
+                <button type="button" onclick="downloadWithLoading('https://younghunkimm.github.io/assets/file/loading/video.mp4', 'video.mp4');">다운로드</button>
             </div>
         </div>
     </div>
 
-
-    <script src="./download-with-spinner.js"></script>
+    <script src="./download-with-progressbar.js"></script>
 </body>
 </html>
