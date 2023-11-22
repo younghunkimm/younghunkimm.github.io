@@ -123,7 +123,7 @@ function fadeInAction(target, timer = 1000, callback) {
         target.style.opacity = level;
         if (level >= 1) {
             clearInterval(inTimer);
-            callback();
+            typeof callback === 'function' && callback();
         }
     }, 10);
 }
@@ -138,7 +138,7 @@ function fadeOutAction(target, timer = 1000, callback) {
         if (level <= 0) {
             target.style.display = 'none';
             clearInterval(outTimer);
-            callback();
+            typeof callback === 'function' && callback();
         }
     }, 10);
 }
