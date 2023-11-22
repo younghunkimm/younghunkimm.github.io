@@ -1,0 +1,13 @@
+body { background-color: #333; }
+
+.container { width: 1200px; margin: 0 auto; }
+@media screen and (max-width: 1240px) {
+    .container { width: 100%; padding: 0 20px; }
+}
+
+.card { background-color: #fff; margin: 50px 0; padding: 40px; border-radius: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, .1); }
+
+.card-title { padding: 10px 0; border-bottom: 1px solid #ddd; }
+.card-title h2 { font-size: 20px; font-weight: 700; }
+
+.card-body { padding: 10px 0; }

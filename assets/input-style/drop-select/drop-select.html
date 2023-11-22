@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Select - Only JS</title>
+
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="./drop-select.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="card">
+                <div class="card-title">
+                    <h2>Drop Select - Only JS</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="drop-select">
+                        <div class="value" style="">
+                            <span>선택안함</span>
+                            <button type="button" class="btn drop-select-btn"></button>
+                        </div>
+                        <div class="result" id="mbLevel">
+                            <ul class="list">
+                                <li class="all">
+                                    <label class="g-label">
+                                        <input type="checkbox" class="custom-check-input">
+                                        <span class="align-middle">전체</span>
+                                    </label>
+                                </li>
+                                <li class="selected" id="mbLevelType">
+                                    <label class="g-label">
+                                        <input type="checkbox" name="mb_level_type[]" value="all" class="custom-check-input">
+                                        <span class="align-middle">등급범위</span>
+                                    </label>
+                                    <button type="button" class="btn drop-select-btn"></button>
+                                    <ul>
+                                        <li>
+                                            <label class="g-label">
+                                                <input type="checkbox" name="mb_level_type[]" value="일반회원" class="custom-check-input">
+                                                <span class="align-middle">일반회원</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="g-label">
+                                                <input type="checkbox" name="mb_level_type[]" value="강사" class="custom-check-input">
+                                                <span class="align-middle">강사</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="g-label">
+                                                <input type="checkbox" name="mb_level_type[]" value="관리자" class="custom-check-input">
+                                                <span class="align-middle">관리자</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="selected" id="mbLevelType">
+                                    <label class="g-label">
+                                        <input type="checkbox" name="od_settle_case[]" value="all" class="custom-check-input">
+                                        <span class="align-middle">결제수단</span>
+                                    </label>
+                                    <button type="button" class="btn drop-select-btn"></button>
+                                    <ul>
+                                        <li>
+                                            <label class="g-label">
+                                                <input type="checkbox" name="od_settle_case[]" value="무통장" class="custom-check-input">
+                                                <span class="align-middle">무통장</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="g-label">
+                                                <input type="checkbox" name="od_settle_case[]" value="신용카드" class="custom-check-input">
+                                                <span class="align-middle">신용카드</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="g-label">
+                                                <input type="checkbox" name="od_settle_case[]" value="가상계좌" class="custom-check-input">
+                                                <span class="align-middle">가상계좌</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./jsdrop-select.js"></script>
+</body>
+</html>
