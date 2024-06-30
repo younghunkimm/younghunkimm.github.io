@@ -366,7 +366,7 @@ date: '2024-06-30 12:01:00 +0900'
 ### HTML 활용
 
 > 이미지의 가로, 세로 길이를 설정할 수 있다.\
-> \<img src="`Path`"\ width="`Width`" height="`Height`">
+> \<img src="`Path`" width="`Width`" height="`Height`">
 
 * **예시**
 
