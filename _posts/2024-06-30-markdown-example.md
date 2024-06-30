@@ -323,8 +323,8 @@ date: '2024-06-30 12:01:00 +0900'
 
   ```plaintext
   <{{ site.social.links[0] }}>  
-  [Link]({% if site.social.links %} {{ site.social.links[0] }} {% endif %})  
-  [Link]({% if site.social.links %} {{ site.social.links[0] }} {% endif %} "마우스 오버 시 출력될 링크에 대한 설명")  
+  [Link]({% if site.social.links %}{{ site.social.links[0] }}{% endif %})  
+  [Link]({% if site.social.links %}{{ site.social.links[0] }}{% endif %} "마우스 오버 시 출력될 링크에 대한 설명")  
   [새창으로 열기]({% if site.social.links %} {{ site.social.links[0] }} {% endif %}){:target="_blank"}
 
   [현재 페이지 안에서의 이동](#폰트-스타일)
@@ -333,9 +333,9 @@ date: '2024-06-30 12:01:00 +0900'
 * **결과**
 
   <{{ site.social.links[0] }}>  
-  [Github]({% if site.social.links %} {{ site.social.links[0] }} {% endif %})  
-  [Github]({% if site.social.links %} {{ site.social.links[0] }} {% endif %} "마우스 오버 시 출력될 링크에 대한 설명")  
-  [새창으로 열기]({% if site.social.links %} {{ site.social.links[0] }} {% endif %}){:target="_blank"}
+  [Github]({% if site.social.links %}{{ site.social.links[0] }}{% endif %})  
+  [Github]({% if site.social.links %}{{ site.social.links[0] }}{% endif %} "마우스 오버 시 출력될 링크에 대한 설명")  
+  [새창으로 열기]({% if site.social.links %}{{ site.social.links[0] }}{% endif %}){:target="_blank"}
 
   [현재 페이지 안에서의 이동](#폰트-스타일)
   ❗️ 사용법
