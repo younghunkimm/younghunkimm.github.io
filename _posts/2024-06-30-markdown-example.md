@@ -325,7 +325,7 @@ date: '2024-06-30 12:01:00 +0900'
   <{{ site.social.links[0] }}>  
   [Link]({% if site.social.links %}{{ site.social.links[0] }}{% endif %})  
   [Link]({% if site.social.links %}{{ site.social.links[0] }}{% endif %} "마우스 오버 시 출력될 링크에 대한 설명")  
-  [새창으로 열기]({% if site.social.links %} {{ site.social.links[0] }} {% endif %}){:target="_blank"}
+  [새창으로 열기]({% if site.social.links %}{{ site.social.links[0] }}{% endif %}){:target="_blank"}
 
   [현재 페이지 안에서의 이동](#폰트-스타일)
   ```
