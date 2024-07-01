@@ -1,16 +1,13 @@
 <div id="scroll-gauge"></div>
 
-<script>
+<script type="text/javascript">
     const FillScrollGauge = () => {
-        // 게이지바 엘리먼트와 현재 스크롤 위치를 가져옴
         const guageBar = document.getElementById('scroll-gauge');
         const scrollPosition = window.scrollY || this.window.pageYOffset;
 
-        // 전체 페이지 높이와 브라우저 창 높이를 가져옴
         const pageHeight = document.documentElement.scrollHeight;
         const windowHeight = window.innerHeight;
 
-        // 현재 스크롤 위치에서 게이지바가 차는 비율을 계산
         const fillRatio = scrollPosition / (pageHeight - windowHeight);
 
         guageBar.style.width = fillRatio * 100 + '%';
