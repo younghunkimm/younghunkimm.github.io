@@ -663,6 +663,17 @@ mjx-container {
   min-width: auto !important;
 }
 
+/* --- scroll guage layout --- */
+#scroll-gauge {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: orange;
+    z-index: 999;
+}
+
 /* --- sidebar layout --- */
 
 $sidebar-display: 'sidebar-display';
