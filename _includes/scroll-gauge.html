@@ -11,7 +11,7 @@
         const fillRatio = scrollPosition / (pageHeight - windowHeight);
 
         guageBar.style.width = fillRatio * 100 + '%';
-    }
+    };
 
     window.addEventListener('scroll', FillScrollGauge);
     window.addEventListener('load', FillScrollGauge);
