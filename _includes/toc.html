@@ -7,8 +7,13 @@
 
 {% if enable_toc %}
   <section id="toc-wrapper" class="d-none ps-0 pe-4">
-    <h2 class="panel-heading ps-3 mb-2">{{- site.data.locales[include.lang].panel.toc -}}</h2>
-    <nav id="toc"></nav>
+    <div id="toc-box">
+        <h2 class="panel-heading ps-3 mb-2">{{- site.data.locales[include.lang].panel.toc -}}</h2>
+        <nav id="toc"></nav>
+    </div>
+    <button id="toc-toggle-btn" class="btn btn-sm btn-outline-secondary" aria-label="목차 열기/닫기">
+        <i class="fas fa-list-ul"></i>
+    </button>
   </section>
 
     <script>
@@ -24,48 +29,22 @@
                 return parents;
             };
 
-            /* 쓰로틀링 */
-            const throttling = (func, timeout = 300) => {
-                let timerId = null;
-
-                return (() => {
-                    if (timerId) {
-                        return;
-                    }
-        
-                    timerId = setTimeout(() => {
-                        func();
-                        timerId = null; 
-                    }, timeout);
-                })();
-            };
-
             /* 목차 보이기/숨기기 */
-            const tocToggleHandler = ({ target }, isUp) => {
-                const TocId = 'toc-wrapper';
-                const TocEl =  document.getElementById(TocId);
+            const TocToggleBtn = document.getElementById('toc-toggle-btn');
+            const TocId = 'toc-wrapper';
+            const TocEl = document.getElementById(TocId);
 
-                if (parents(target, '#' + TocId).length > 0) {
-                    return;
-                };
-        
-                if (isUp) TocEl.classList.add('on');
+            TocToggleBtn.addEventListener('click', () => {
+                TocToggleBtn.classList.toggle('on');
+
+                if (TocToggleBtn.classList.contains('on')) TocEl.classList.add('on');
                 else TocEl.classList.remove('on');
-            };
-
-            /* 스크롤 이벤트 방향 감지 */
-            window.addEventListener('wheel', ({ target, wheelDeltaY }) => {
-                let isUp = wheelDeltaY > 0;
-                
-                throttling(() => tocToggleHandler({ target }, isUp));
             });
 
             /* 목차 외부를 클릭하면 목차를 닫는다. */
             document.addEventListener('click', ({ target }) => {
-                const TocId = 'toc-wrapper';
-                const TocEl =  document.getElementById('toc-wrapper');
-
                 if (!parents(target, '#' + TocId).length) {
+                    TocToggleBtn.classList.remove('on');
                     TocEl.classList.remove('on');
                 };
             });
