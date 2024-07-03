@@ -29,24 +29,20 @@
                 return parents;
             };
 
-            /* 쓰로틀링 */
-            const throttling = (func, timeout = 300) => {
-                let timerId = null;
+            /* 디바운싱 */
+            const debounce = (func, timeout = 100) => {
+                let timer;
 
-                return (() => {
-                    if (timerId) {
-                        return;
-                    }
-
-                    timerId = setTimeout(() => {
-                        func();
-                        timerId = null; 
+                return (...args) => {
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        func(...args);
                     }, timeout);
-                })();
+                };
             };
 
             /* 목차 현재 위치 추적 */
-            const TrackingScroll = () => {                
+            const TrackingScroll = debounce(() => {
                 const TocBox = document.getElementById('toc-box');
                 const ActiveLink = TocBox.querySelector('.is-active-link');
 
@@ -59,7 +55,7 @@
                 const TrackingValue = ActiveLinkClientTop + TocBoxScrollTop - TocBoxClientTop - ActiveLiHeight;
 
                 TocBox.scrollTop = TrackingValue;
-            };
+            });
 
             const TocToggleBtn = document.getElementById('toc-toggle-btn');
             const TocId = 'toc-wrapper';
@@ -84,7 +80,7 @@
             });
 
             window.addEventListener('scroll', () => {
-                throttling(TrackingScroll);
+                TrackingScroll();
             });
         };
     </script>

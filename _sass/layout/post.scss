@@ -318,6 +318,7 @@ header {
       flex: 1 1 auto;
       height: 100%;
       overflow-y: scroll;
+      scroll-behavior: smooth;
     }
 
     & #toc-toggle-btn {
