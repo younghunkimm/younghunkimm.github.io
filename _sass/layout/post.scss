@@ -326,6 +326,8 @@ header {
             display: block;
             background-color: var(--main-bg);
             opacity: .5;
+            color: orange;
+            border: 1px solid currentColor;
 
             &.on {
                 opacity: 1;
