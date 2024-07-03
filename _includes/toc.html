@@ -10,4 +10,65 @@
     <h2 class="panel-heading ps-3 mb-2">{{- site.data.locales[include.lang].panel.toc -}}</h2>
     <nav id="toc"></nav>
   </section>
+
+    <script>
+        {
+            // 부모 요소들 찾기
+            const parents = (el, selector) => {
+                const parents = [];
+        
+                while ((el = el.parentNode) && el !== document) {
+                    if (!selector || el.matches(selector)) parents.push(el);
+                }
+                
+                return parents;
+            };
+
+            // 쓰로틀링
+            const throttling = (func, timeout = 300) => {
+                let timerId = null;
+
+                return (() => {
+                    if (timerId) {
+                        return;
+                    }
+        
+                    timerId = setTimeout(() => {
+                        func();
+                        timerId = null; 
+                    }, timeout);
+                })();
+            };
+
+            // 목차 보이기/숨기기
+            const tocToggleHandler = ({ target }, isUp) => {
+                const TocId = 'toc-wrapper';
+                const TocEl =  document.getElementById(TocId);
+
+                if (parents(target, '#' + TocId).length > 0) {
+                    return;
+                };
+        
+                if (isUp) TocEl.classList.add('on');
+                else TocEl.classList.remove('on');
+            };
+
+            // 스크롤 이벤트 방향 감지
+            window.addEventListener('wheel', ({ target, wheelDeltaY }) => {
+                let isUp = wheelDeltaY > 0;
+                
+                throttling(() => tocToggleHandler({ target }, isUp));
+            });
+
+            // 목차 외부를 클릭하면 목차를 닫는다.
+            document.addEventListener('click', ({ target }) => {
+                const TocId = 'toc-wrapper';
+                const TocEl =  document.getElementById('toc-wrapper');
+
+                if (!parents(target, '#' + TocId).length) {
+                    TocEl.classList.remove('on');
+                };
+            });
+        };
+    </script>
 {% endif %}

@@ -290,6 +290,29 @@ header {
   }
 }
 
+@media all and (max-width: 1199px) {
+    #toc-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        width: 100%;
+        max-height: 50vh;
+        animation: none;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background-color: var(--main-bg);
+        border-left: none;
+        border-bottom: 1px solid rgba(158, 158, 158, .17);
+        overflow-y: scroll;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #toc-wrapper.on {
+        transform: translateY(0);
+    }
+}
+
 /* --- Related Posts --- */
 
 #related-posts {
