@@ -29,16 +29,50 @@
                 return parents;
             };
 
-            /* 목차 보이기/숨기기 */
+            /* 쓰로틀링 */
+            const throttling = (func, timeout = 300) => {
+                let timerId = null;
+
+                return (() => {
+                    if (timerId) {
+                        return;
+                    }
+
+                    timerId = setTimeout(() => {
+                        func();
+                        timerId = null; 
+                    }, timeout);
+                })();
+            };
+
+            /* 목차 현재 위치 추적 */
+            const TrackingScroll = () => {                
+                const TocBox = document.getElementById('toc-box');
+                const ActiveLink = TocBox.querySelector('.is-active-link');
+
+                const TocBoxScrollTop = TocBox.scrollTop;
+                const TocBoxClientTop = TocBox.getBoundingClientRect().top;
+                const ActiveLinkClientTop = ActiveLink.getBoundingClientRect().top;
+
+                const ActiveLiHeight = ActiveLink.clientHeight;
+                
+                const TrackingValue = ActiveLinkClientTop + TocBoxScrollTop - TocBoxClientTop - ActiveLiHeight;
+
+                TocBox.scrollTop = TrackingValue;
+            }
+
             const TocToggleBtn = document.getElementById('toc-toggle-btn');
             const TocId = 'toc-wrapper';
             const TocEl = document.getElementById(TocId);
 
+            /* 목차 보이기/숨기기 */
             TocToggleBtn.addEventListener('click', () => {
                 TocToggleBtn.classList.toggle('on');
 
                 if (TocToggleBtn.classList.contains('on')) TocEl.classList.add('on');
                 else TocEl.classList.remove('on');
+
+                TrackingScroll();
             });
 
             /* 목차 외부를 클릭하면 목차를 닫는다. */
@@ -47,6 +81,10 @@
                     TocToggleBtn.classList.remove('on');
                     TocEl.classList.remove('on');
                 };
+            });
+
+            window.addEventListener('scroll', () => {
+                throttling(TrackingScroll);
             });
         };
     </script>
