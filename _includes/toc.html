@@ -13,7 +13,7 @@
 
     <script>
         {
-            // 부모 요소들 찾기
+            /* 부모 요소들 찾기 */
             const parents = (el, selector) => {
                 const parents = [];
         
@@ -24,7 +24,7 @@
                 return parents;
             };
 
-            // 쓰로틀링
+            /* 쓰로틀링 */
             const throttling = (func, timeout = 300) => {
                 let timerId = null;
 
@@ -40,7 +40,7 @@
                 })();
             };
 
-            // 목차 보이기/숨기기
+            /* 목차 보이기/숨기기 */
             const tocToggleHandler = ({ target }, isUp) => {
                 const TocId = 'toc-wrapper';
                 const TocEl =  document.getElementById(TocId);
@@ -53,14 +53,14 @@
                 else TocEl.classList.remove('on');
             };
 
-            // 스크롤 이벤트 방향 감지
+            /* 스크롤 이벤트 방향 감지 */
             window.addEventListener('wheel', ({ target, wheelDeltaY }) => {
                 let isUp = wheelDeltaY > 0;
                 
                 throttling(() => tocToggleHandler({ target }, isUp));
             });
 
-            // 목차 외부를 클릭하면 목차를 닫는다.
+            /* 목차 외부를 클릭하면 목차를 닫는다. */
             document.addEventListener('click', ({ target }) => {
                 const TocId = 'toc-wrapper';
                 const TocEl =  document.getElementById('toc-wrapper');
