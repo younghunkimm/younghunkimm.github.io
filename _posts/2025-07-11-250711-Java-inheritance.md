@@ -2,7 +2,11 @@
 title: "[Java] 상속(Inheritance)"
 categories: [Java]
 tags: [Java, inheritance, 상속, TIL]
-date: '2025-07-11 19:06:00 +0900'
+date: '2025-07-11 19:06:00'
+# last_modified_at: '2025-07-11 19:06:00'
+# sitemap:
+#     changefreq: weekly
+#     priority: 0.5
 ---
 
 인프런 얄코의 **제대로 파는 자바** 강의를 듣고 정리한 글입니다.
@@ -21,6 +25,11 @@ class 자식클래스 extends 부모클래스 {
     // 추가적인 필드나 메서드를 정의할 수 있다.
 }
 ```
+
+- `extends`: 상속을 표현할 때 사용
+- 한 클래스만 상속 가능 (다중 상속 불가 ❌)
+- 부모 클래스의 생성자는 자동으로 상속되지 않고, `super()`로 호출 가능
+- `private` 멤버는 상속되어도 직접 접근 불가 (`protected`, `public`은 가능)
 
 ## 예제1️⃣
 
