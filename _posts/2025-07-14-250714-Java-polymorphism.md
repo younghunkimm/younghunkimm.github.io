@@ -1,5 +1,5 @@
 ---
-title: "[Java] 다형성(Polymorphism)"
+title: "[Java] 다형성(Polymorphism) test"
 categories: [Java]
 tags: [Java, polymorphism, 다형성, 객체지향, OOP, TIL]
 date: '2025-07-14 20:06:00 +0900'
