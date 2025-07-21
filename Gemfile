@@ -9,3 +9,6 @@ group :test do
   gem "tzinfo"
   gem "tzinfo-data"
 end
+
+gem "jekyll-feed"
+gem "jekyll-sitemap"
