@@ -1,6 +1,6 @@
 ---
 title: "[Java] 익명 클래스(Anonymous Class)"
-categories: [Java]
+categories: [Java, Java/Basic]
 tags: [Java, 익명 클래스, Anonymous Class, TIL]
 date: '2025-07-22 20:06:00 +0900'
 ---

@@ -1,6 +1,6 @@
 ---
 title: "[Java] 다형성(Polymorphism)"
-categories: [Java]
+categories: [Java, Java/Basic]
 tags: [Java, polymorphism, 다형성, 객체지향, OOP, TIL]
 date: '2025-07-14 20:06:00 +0900'
 ---

@@ -1,6 +1,6 @@
 ---
 title: "[트러블슈팅] 키오스크 과제 트러블슈팅 기록"
-categories: [트러블슈팅]
+categories: [Java, Java/Trouble Shooting]
 tags: [Java, 트러블슈팅, Trouble Shooting, TIL]
 date: '2025-07-23 13:13:00 +0900'
 ---

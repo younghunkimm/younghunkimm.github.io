@@ -1,6 +1,6 @@
 ---
 title: "[Java] 상속(Inheritance)"
-categories: [Java]
+categories: [Java, Java/Basic]
 tags: [Java, inheritance, 상속, TIL]
 date: '2025-07-11 19:06:00'
 # last_modified_at: '2025-07-11 19:06:00'

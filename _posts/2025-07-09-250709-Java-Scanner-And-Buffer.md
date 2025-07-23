@@ -1,7 +1,7 @@
 ---
 title: "[Java] Scanner 그리고 Buffer 비우기"
-categories: [Java]
-tags: [Java, Scanner, Buffer, TIL]
+categories: [Java, Java/Trouble Shooting]
+tags: [Java, Scanner, Buffer, Trouble Shooting, TIL]
 date: '2025-07-09 23:06:00 +0900'
 ---
 

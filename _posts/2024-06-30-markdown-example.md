@@ -1,6 +1,6 @@
 ---
 title: "[Github Blog] 마크다운(Markdown) 사용법"
-categories: [Tips]
+categories: [Markdown]
 tags: [마크다운, Markdown]
 date: '2024-06-30 12:01:00 +0900'
 ---
