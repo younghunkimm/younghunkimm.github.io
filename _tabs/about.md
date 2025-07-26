@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![header](https://capsule-render.vercel.app/api?type=rect&height=3&color=timeGradient&section=header)
+![header](https://capsule-render.vercel.app/api?type=waving&height=80&color=timeGradient&section=header)
 
 <h2 style="line-height: 1.4">
     안녕하세요
@@ -17,4 +17,4 @@ order: 4
 
 기록은 성장의 발자국이라고 생각하며, 이 블로그에 공부한 내용을 차곡차곡 정리하고 있습니다.
 
-![footer](https://capsule-render.vercel.app/api?type=rect&height=3&color=timeGradient&section=footer)
+![footer](https://capsule-render.vercel.app/api?type=waving&height=80&color=timeGradient&section=footer)
