@@ -19,12 +19,7 @@ date: '2025-07-28 20:20:00 +0900'
 
 ---
 
-```plaintext
-1. Presentation Layer    ← 웹 요청 수신, 요청 흐름 제어
-2. Business Layer        ← 비즈니스 로직 처리
-3. Persistence Layer     ← DB 처리 (JPA, MyBatis 등)
-4. Database Layer        ← 데이터 모델
-```
+![4layered]({{ site.baseurl }}/assets/img/posts/250729/250729-1.png){: style="width: 500px; max-width: 100%;"}
 
 > 위 방향으로만 의존하도록 설계\
 > 예를 들어, Repository가 Service 호출❌
@@ -33,13 +28,14 @@ date: '2025-07-28 20:20:00 +0900'
 ### 계층별 설명
 
 1. **Presentation Layer (Controller)**
+   - 웹 요청 수신, 요청 흐름 제어
    - 클라이언트의 요청을 받고 응답을 반환하는 역할 (Request, Response)
 
 2. **Business Layer (Service)**
    - 핵심 비즈니스 로직 수행
 
 3. **Persistence Layer (Repository)**
-   - 데이터베이스와 직접 통신하는 계층 (JPA, MyBatis)
+   - 데이터베이스와 직접 통신하는 계층 (JPA, MyBatis 등)
 
 4. **Database Layer (DB)**
    - DB 테이블과 매핑되는 핵심 도메인 객체
