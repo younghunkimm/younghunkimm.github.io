@@ -79,8 +79,6 @@ private Schedule schedule;
 @RequiredArgsConstructor
 public class CommentRepositoryImpl implements CommentRepositoryCustom {
 
-    private final JPAQueryFactory jpaQueryFactory;
-    private final QComment qComment = QComment.comment;
     private final JPAQueryFactory queryFactory;
 
     @Override
