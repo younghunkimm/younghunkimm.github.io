@@ -1,7 +1,7 @@
 ---
-title: "[Spring Boot] 일정관리 프로젝트 트러블슈팅 기록"
-categories: [Spring Boot, Spring Boot/Trouble Shooting]
-tags: [Java, spring boot, JPA, MySQL, Trouble Shooting]
+title: "[Spring] 일정관리 프로젝트 트러블슈팅 기록"
+categories: [Spring, Spring/Trouble Shooting]
+tags: [Java, spring, JPA, MySQL, Trouble Shooting]
 date: '2025-08-04 10:02:00 +0900'
 ---
 
