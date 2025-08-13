@@ -59,8 +59,8 @@ public ScheduleSearchDetailResponseDto findById(Long scheduleId) {
 `Comment.java`
 ```java
 @ManyToOne(fetch = FetchType.LAZY)
-@JoinColumn(name = "schedule_id")
-private Schedule schedule;
+@JoinColumn(name = "member_id")
+private Member member;
 ```
 
 ### ✅ 해결
