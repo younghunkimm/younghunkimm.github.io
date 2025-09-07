@@ -1,7 +1,7 @@
 ---
 title: "[Spring] 스프링 심화 트러블슈팅 기록"
 categories: [Spring, Spring/Trouble Shooting]
-tags: [Spring, 트러블슈팅, Trouble Shooting, TIL]
+tags: [spring, 트러블슈팅, Trouble Shooting, TIL]
 date: '2025-09-01 10:17:00 +0900'
 ---
 

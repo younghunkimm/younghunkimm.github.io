@@ -6,6 +6,7 @@ date: '2025-08-26 20:15:00 +0900'
 ---
 
 뉴스피드 프로젝트를 진행하면서 겪은 트러블슈팅의 과정들에 대한 기록입니다.
+해당 프로젝트의 전체소스는 [여기](https://github.com/younghunkimm/NewsFeedProject-7){:target="_blank"} 에서 확인하실 수 있습니다.
 
 ## 트러블슈팅
 
