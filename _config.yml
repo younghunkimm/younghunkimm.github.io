@@ -1,5 +1,11 @@
 # The Site Configuration
 
+# Port
+port: 5000 # 기본 4000 포트가 Windows에서 예약/충돌 문제로 사용 불가 → 5000으로 지정
+livereload: true # 저장 시 브라우저 자동 새로고침 활성화
+force_polling: true # Windows에서 파일 변경 감지 문제 해결
+future: true # 미래 날짜의 포스트도 빌드
+
 # Import the theme
 theme: jekyll-theme-chirpy
 

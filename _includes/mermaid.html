@@ -1,36 +1,10 @@
-<!-- mermaid-js loader -->
-<script type="text/javascript">
-  function updateMermaid(event) {
-    if (event.source === window && event.data && event.data.direction === ModeToggle.ID) {
-      const mode = event.data.message;
-
-      if (typeof mermaid === 'undefined') {
-        return;
-      }
-
-      let expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
-      let config = { theme: expectedTheme };
-
-      {%- comment -%}
-        Re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344>
-      {%- endcomment -%}
-      const mermaidList = document.getElementsByClassName('mermaid');
-
-      [...mermaidList].forEach((elem) => {
-        const svgCode = elem.previousSibling.children.item(0).innerHTML;
-        elem.innerHTML = svgCode;
-        elem.removeAttribute('data-processed');
-      });
-
-      mermaid.initialize(config);
-      mermaid.init(undefined, '.mermaid');
-    }
-  }
-
+<!-- mermaid-js loader (UMD, global mermaid) -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
   (function () {
-    let initTheme = 'default';
-    const html = document.documentElement;
-
+    // 초기 테마 결정
+    var initTheme = 'default';
+    var html = document.documentElement;
     if (
       (html.hasAttribute('data-mode') && html.getAttribute('data-mode') === 'dark') ||
       (!html.hasAttribute('data-mode') && window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -38,25 +12,45 @@
       initTheme = 'dark';
     }
 
-    let mermaidConf = {
-      theme: initTheme {%- comment -%}  <default | dark | forest | neutral> {%- endcomment -%}
-    };
+    // fenced code(```mermaid) -> <pre class="mermaid">로 변환
+    var basicList = document.getElementsByClassName('language-mermaid');
+    Array.prototype.forEach.call(basicList, function (elem) {
+      var svgCode = elem.textContent;
+      var backup = elem.parentElement; // <pre><code class="language-mermaid">...</code></pre>
+      if (backup) backup.classList.add('d-none');
 
-    {%- comment -%} Create mermaid tag {%- endcomment -%}
-    const basicList = document.getElementsByClassName('language-mermaid');
-    [...basicList].forEach((elem) => {
-      const svgCode = elem.textContent;
-      const backup = elem.parentElement;
-      backup.classList.add('d-none');
-      {%- comment -%} create mermaid node {%- endcomment -%}
-      let mermaid = document.createElement('pre');
-      mermaid.classList.add('mermaid');
-      const text = document.createTextNode(svgCode);
-      mermaid.appendChild(text);
-      backup.after(mermaid);
+      var mermaidEl = document.createElement('pre'); // ← 이름 충돌 방지
+      mermaidEl.classList.add('mermaid');
+      mermaidEl.textContent = svgCode;
+      backup.after(mermaidEl);
     });
 
-    mermaid.initialize(mermaidConf);
+    // 초기화 + 렌더
+    mermaid.initialize({ startOnLoad: false, theme: initTheme });
+    // v10+에서 명시적 렌더 권장
+    mermaid.run({ querySelector: '.mermaid' });
+
+    // 다크/라이트 토글 시 재렌더
+    function updateMermaid(event) {
+      if (event.source === window && event.data && event.data.direction === ModeToggle.ID) {
+        var mode = event.data.message;
+        var expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
+
+        // 기존 SVG를 다시 텍스트로 되돌리고 재초기화
+        var mermaidList = document.getElementsByClassName('mermaid');
+        Array.prototype.forEach.call(mermaidList, function (el) {
+          var svg = el.previousSibling && el.previousSibling.children ? el.previousSibling.children.item(0) : null;
+          if (svg && svg.innerHTML) {
+            el.innerHTML = svg.innerHTML;
+          }
+          el.removeAttribute('data-processed');
+        });
+
+        mermaid.initialize({ startOnLoad: false, theme: expectedTheme });
+        mermaid.run({ querySelector: '.mermaid' });
+      }
+    }
+
     window.addEventListener('message', updateMermaid);
   })();
 </script>
