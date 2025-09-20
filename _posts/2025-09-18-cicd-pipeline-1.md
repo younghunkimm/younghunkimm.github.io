@@ -52,27 +52,40 @@ CI/CD 파이프라인의 목표는 다음과 같습니다.
 
 ```mermaid
 flowchart TB
-    subgraph GitHub["GitHub"]
+    subgraph Dev [GitHub]
         A[Source Code]
-        B[GitHub Actions]
+        B[GitHub Actions CI CD Workflow]
     end
 
-    subgraph AWS["AWS Cloud"]
-        C[Docker Hub]
-        D[EC2 Instances]
-        E[ALB]
-        F[SSM Parameter Store]
-        G[SSM Run Command]
+    subgraph Docker [Docker Hub]
+        C[Private Repository]
     end
+
+    subgraph AWS [AWS Cloud]
+        subgraph IAM [IAM]
+            R[OIDC Role]
+        end
+        D[SSM Parameter Store]
+        E[SSM Document spring-plus-deploy]
+        F[EC2 Instances - Spring Boot in Docker]
+        G[ALB - Load Balancer]
+    end
+
+    H[Client or User]
 
     A --> B
-    B -->|Build & Push| C
-    B -->|Deploy Trigger| G
-    G --> D
-    C --> D
-    D --> E
-    E --> H[Client/User]
-    F --> D
+    B -->|Assume Role OIDC| R
+    R --> B
+
+    B -->|Build and Push| C
+    B -->|Trigger Deploy| E
+    B -->|Get params| D
+
+    E -->|Run Command| F
+    C -->|Pull Image| F
+    D -->|Env vars and secrets| F
+
+    F --> G --> H
 ```
 
 ### 각 구성 요소의 역할
