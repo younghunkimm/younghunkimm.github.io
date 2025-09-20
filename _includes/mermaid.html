@@ -1,9 +1,7 @@
-{% raw %}
+<!-- mermaid-js loader (UMD, global mermaid) -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
   (function () {
-    if (typeof window.mermaid === 'undefined') return;
-
     var initTheme = 'default';
     var html = document.documentElement;
     if (
@@ -13,42 +11,40 @@
       initTheme = 'dark';
     }
 
-    // fenced ```mermaid -> <pre class="mermaid">
-    var codeBlocks = document.getElementsByClassName('language-mermaid');
-    Array.prototype.forEach.call(codeBlocks, function (code) {
-      var src = code.textContent || '';
-      var pre = code.parentElement; // <pre><code class="language-mermaid">...</code></pre>
-      if (pre && pre.style) pre.style.display = 'none';
+    var basicList = document.getElementsByClassName('language-mermaid');
+    Array.prototype.forEach.call(basicList, function (elem) {
+      var svgCode = elem.textContent;
+      var backup = elem.parentElement;
+      if (backup) backup.classList.add('d-none');
 
-      var el = document.createElement('pre');
-      el.classList.add('mermaid');
-      el.textContent = src;
-      el.dataset.src = src;            // ← 원문 저장
-      pre.after(el);
+      var mermaidEl = document.createElement('pre');
+      mermaidEl.classList.add('mermaid');
+      mermaidEl.textContent = svgCode;
+      backup.after(mermaidEl);
     });
 
-    // 초기 렌더
     mermaid.initialize({ startOnLoad: false, theme: initTheme });
     mermaid.run({ querySelector: '.mermaid' });
 
-    // 테마 토글에 맞춰 재렌더
     function updateMermaid(event) {
-      if (!(event && event.data && event.data.direction === ModeToggle.ID)) return;
-      var mode = event.data.message;
-      var nextTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
+      if (event.source === window && event.data && event.data.direction === ModeToggle.ID) {
+        var mode = event.data.message;
+        var expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
 
-      var list = document.getElementsByClassName('mermaid');
-      Array.prototype.forEach.call(list, function (el) {
-        // 원문 복구 후 재처리 플래그 제거
-        if (el.dataset && el.dataset.src) el.textContent = el.dataset.src;
-        el.removeAttribute('data-processed');
-      });
+        var mermaidList = document.getElementsByClassName('mermaid');
+        Array.prototype.forEach.call(mermaidList, function (el) {
+          var svg = el.previousSibling && el.previousSibling.children ? el.previousSibling.children.item(0) : null;
+          if (svg && svg.innerHTML) {
+            el.innerHTML = svg.innerHTML;
+          }
+          el.removeAttribute('data-processed');
+        });
 
-      mermaid.initialize({ startOnLoad: false, theme: nextTheme });
-      mermaid.run({ querySelector: '.mermaid' });
+        mermaid.initialize({ startOnLoad: false, theme: expectedTheme });
+        mermaid.run({ querySelector: '.mermaid' });
+      }
     }
 
     window.addEventListener('message', updateMermaid);
   })();
 </script>
-{% endraw %}
