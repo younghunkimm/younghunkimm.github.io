@@ -10,7 +10,11 @@ mermaid: true
 > 단순한 배포를 넘어 CI/CD 파이프라인까지 직접 구축하게 되었습니다. \
 > 이번 포스팅의 시리즈에서는 제가 경험한 과정을 기록하고, 배운 점들을 정리해보려고 합니다.
 
-해당 프로젝트의 전체소스는 [여기](https://github.com/younghunkimm/sparta-spring-plus){:target="_blank"} 에서 확인하실 수 있습니다.
+해당 프로젝트의 전체소스는 [여기](https://github.com/younghunkimm/sparta-spring-plus){:target="_blank"} 에서 확인하실 수 있습니다.  
+
+> 이번 시리즈는 AWS의 `S3 Bucket`과 `RDS MySQL Database`가 이미 생성·설정되어 있다는 전제하에 진행합니다.
+> 즉, 파일 저장소와 데이터베이스 환경이 준비된 상태에서 CI/CD 파이프라인 구축 과정을 다룹니다.
+{: .prompt-info}
 
 ## 1. CI/CD 도입 배경
 ---

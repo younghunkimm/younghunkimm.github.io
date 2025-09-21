@@ -87,6 +87,22 @@ docker run -d -p 8080:8080 --env-file .env.prod --name spring-plus younghunkimm/
 - `--name spring-plus`: 컨테이너 이름 지정
 - `younghunkimm/spring-plus:latest`: 이미지 이름과 태그
 
+#### product env example
+
+```html
+SPRING_PROFILES_ACTIVE=prod
+DB_URL=jdbc:mysql://localhost:3306/<DB_NAME>
+DB_USERNAME=<DB_USERNAME>
+DB_PASSWORD=<DB_PASSWORD>
+JWT_SECRET_KEY=<JWT_SECRET_KEY>
+AWS_ACCESS_KEY_ID=<Access Key>
+AWS_SECRET_ACCESS_KEY=<Secret Key>
+```
+
+> 실제 운영 환경에서는 `SSM Parameter Store`에서 환경 변수를 읽어오도록 설정하기 때문에  
+> 레지스트리 등록 후 테스트를 완료하신 뒤에는 `.env.prod` 파일은 삭제를 권장드립니다.
+{: .prompt-danger}
+
 ### 실행 확인
 ```shell
 # 모든 컨테이너 상태 확인 (`-a` 옵션으로 종료된 컨테이너도 표시)
