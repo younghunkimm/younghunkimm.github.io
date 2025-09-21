@@ -61,9 +61,9 @@ EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
-> 명령어 설명 \
-> - `gradle/wrapper`를 먼저 복사하면 **Gradle 버전 다운로드 캐시**가 빌드 단계마다 재사용됩니다. \
-> - `sed -i 's/\r$//' gradlew`는 Windows에서 발생하는 `CRLF` 문제를 해결합니다. \
+> 명령어 설명
+> - `gradle/wrapper`를 먼저 복사하면 **Gradle 버전 다운로드 캐시**가 빌드 단계마다 재사용됩니다.
+> - `sed -i 's/\r$//' gradlew`는 Windows에서 발생하는 `CRLF` 문제를 해결합니다.
 > - `--no-daemon` 옵션을 사용하면 CI/CD 환경에서 **빌드 데몬 충돌을 방지**할 수 있습니다.
 {: .prompt-tip}
 

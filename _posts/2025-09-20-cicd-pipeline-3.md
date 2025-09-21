@@ -67,10 +67,36 @@ EC2 인스턴스에서 S3 버킷에 접근할 수 있도록 정책을 추가하�
 }
 ```
 
+> 하나의 S3 Bucket에서 운영서버와 로컬서버의 저장 폴더를 분리하여 관리합니다.  
+> - `prod/profile/*`: 운영서버에서 사용하는 프로필 이미지 폴더
+> - `local/profile/*`: 로컬 개발환경에서 사용하는 프로필 이미지 폴더
+> 
+> 환경별 `application.yml` 파일에서 `storage.prefix` 값을 다르게 설정하여 구분하였습니다.
+{: .prompt-info}
+
 ### 운영서버와 로컬서버 자격증명 차이 설명
 
-해당 내용에 대해선 따로 포스팅하여 다루었으니, [여기]({{ site.baseurl }}/posts/spring-boot-s3-presigned-url/){:target="_blank"}를 참고해주세요.   
-이번 포스팅에서는 간단한 설명만 추가합니다.
+`AWS SDK for Java v2`에서는 자격증명을 찾기 위해 `DefaultCredentialsProvider` 를 사용하며,  
+다음과 같이 체인 방식으로 접근합니다. ([공식문서 참고](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/credentials.html){:target="_blank"})  
+
+1. 환경 변수
+   - `AWS_ACCESS_KEY_ID` 및 `AWS_SECRET_ACCESS_KEY`
+
+2. Java 시스템 속성
+   - `aws.accessKeyId` 및 `aws.secretKey`
+
+3. Web Identity Token (OIDC, EKS 등)
+   - `AWS_WEB_IDENTITY_TOKEN_FILE` 및 `AWS_ROLE_ARN`
+
+4. Shared Credentials 파일 (`~/.aws/credentials`)
+   - `AWS_PROFILE` 지정 가능, 기본값은 `default` 프로파일
+
+5. AWS Config 파일 (`~/.aws/config`)
+   - `region` 및 `profile` 지정 가능
+
+6. EC2/ECS 메타데이터 서비스 (IMDS / ECS Task Role)
+   - EC2 Instance에 IAM Role이 연결된 경우, 해당 Role의 권한을 사용
+   - `EC2/Fargate`라면 Task Role 획득
 
 #### 운영서버
 
@@ -81,26 +107,32 @@ EC2 인스턴스에서 S3 버킷에 접근할 수 있도록 정책을 추가하�
 EC2 Role 정책에 S3 권한 정책을 설정해주면, EC2 인스턴스에서 IMDS를 통해   
 역할(Role) 정보를 받아 S3에 접근할 수 있습니다.   
 
-즉, EC2 인스턴스에서 S3 버킷에 접근할 때는 별도의 Access Key 및 Secret Key 없이도   
-역할(Role) 기반으로 권한이 부여되기 때문에 환경변수로 관리할 필요가 없어 보안에 유리합니다.
+즉, EC2 인스턴스에서 S3 버킷에 접근할 때는 별도의 `Access Key` 및 `Secret Key` 없이도   
+역할(Role) 기반으로 권한이 부여되기 때문에 환경변수로 관리할 필요가 없어 보안에 유리합니다.  
+
+<span style="color: orange;">6번 체인에서 **IMDS**를 통해 자격증명을 찾습니다.</span>
 
 #### 로컬서버
 
 로컬서버에서 S3에 접근할 때는 `local` 폴더를 사용합니다.   
 
-로컬 개발 환경에서는 EC2 Role이 적용되지 않기 때문에,
+로컬 개발 환경에서는 EC2 Role이 적용되지 않기 때문에,  
 `.env.local` 파일에 S3 `Access Key`와 `Secret Key`를 환경변수로 설정하여 S3에 접근합니다.   
 
-`Access Key`와 `Secret Key`는 S3 버킷 정책에서 `local` 폴더에 대한 접근 권한이 있는 IAM User로 발급받아야 합니다.
+`Access Key`와 `Secret Key`는 S3 버킷 정책에서 `local` 폴더에 대한 접근 권한이 있는 IAM User로 발급받아야 합니다.  
 
-```shell
+<span style="color: orange;">1번 체인에서 **환경 변수**를 통해 자격증명을 찾습니다.</span>
+
+##### local env example
+
+```html
 AWS_ACCESS_KEY_ID=<Access Key>
 AWS_SECRET_ACCESS_KEY=<Secret Key>
 ```
 
 ### SSM Parameter Store 권한 인라인 정책 추가
 
-EC2 인스턴스에서 SSM Parameter Store에 저장된 환경 변수를 읽어올 수 있도록 정책을 추가합니다.   
+EC2 인스턴스에서 `SSM Parameter Store`에 저장된 환경 변수를 읽어올 수 있도록 정책을 추가합니다.   
 로컬 개발 환경에서는 `.env.local` 파일에 직접 환경변수를 설정하여 사용합니다.   
 
 추가하는 방법은 앞서 S3 권한 정책 추가와 동일합니다.   

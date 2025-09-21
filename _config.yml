@@ -25,7 +25,7 @@ title: Hoon Blog # the main title
 tagline: Remind # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  즐겁게 살기 위한 기록
+  Hello, I'm Backend Developer Hoon. Welcome to my blog!
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
