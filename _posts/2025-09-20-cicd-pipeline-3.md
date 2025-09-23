@@ -104,10 +104,10 @@ EC2 인스턴스에서 S3 버킷에 접근할 수 있도록 정책을 추가하�
 이후 `profile`이 아닌 `post` 폴더 권한도 열어주고 싶다면   
 `Resource`에 `arn:aws:s3:::<버킷명>/prod/post/*` 도 추가해주면 됩니다.   
 
-EC2 Role 정책에 S3 권한 정책을 설정해주면, EC2 인스턴스에서 IMDS를 통해   
-역할(Role) 정보를 받아 S3에 접근할 수 있습니다.   
+`EC2 Instance Profile` 정책에 S3 권한 정책을 설정해주면,  
+`EC2 Instance`에서 IMDS를 통해 역할(Role) 정보를 받아 S3에 접근할 수 있습니다.  
 
-즉, EC2 인스턴스에서 S3 버킷에 접근할 때는 별도의 `Access Key` 및 `Secret Key` 없이도   
+즉, `EC2 Instance`에서 S3 버킷에 접근할 때는 별도의 `Access Key` 및 `Secret Key` 없이도   
 역할(Role) 기반으로 권한이 부여되기 때문에 환경변수로 관리할 필요가 없어 보안에 유리합니다.  
 
 <span style="color: orange;">6번 체인에서 **IMDS**를 통해 자격증명을 찾습니다.</span>
