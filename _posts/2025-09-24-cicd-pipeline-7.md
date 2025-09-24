@@ -2,7 +2,7 @@
 title: "[CI/CD] CI/CD Pipeline 구축 (7) - GitHub Actions CI/CD 워크플로우"
 categories: [CI/CD]
 tags: [spring, CI/CD, AWS, GitHub Actions, Build, Test, Gradle]
-date: '2025-09-23 18:50:00 +0900'
+date: '2025-09-24 22:11:00 +0900'
 mermaid: true
 ---
 
