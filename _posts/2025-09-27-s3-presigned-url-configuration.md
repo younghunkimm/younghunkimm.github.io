@@ -2,7 +2,7 @@
 title: "[Spring] AWS S3 Presigned URL 활용한 파일 업로드/다운로드 (2) - Spring Boot Presigned URL 설정"
 categories: [AWS, AWS/S3]
 tags: [spring, spring boot, AWS, S3, Presigned URL, File Upload, File Download]
-date: '2025-09-26 22:59:00 +0900'
+date: '2025-09-27 19:23:00 +0900'
 mermaid: true
 ---
 
