@@ -1,5 +1,5 @@
 ---
-title: "[Redis] Redis 멱등성 락으로 중복 알림 방지 test"
+title: "[Redis] Redis 멱등성 락으로 중복 알림 방지"
 categories: [Redis, Redis/Trouble Shooting]
 tags: [spring, 트러블슈팅, Trouble Shooting, TTL, Redis, 멱등성, Idempotence, FCM, 알림]
 date: '2025-11-17 19:19:00 +0900'
